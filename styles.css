@@ -46,14 +46,58 @@ ol {
 }
 
 header {
-    border: 1px solid green;
+    height: auto;
+    width: 100%;
+    display: grid;
+    padding: 0.5rem 1rem;
+    grid-template-areas: 
+        ". icon ."
+        ". nav ."
+        ". button .";
+    justify-items: center;
+    row-gap: 0.5rem;
+    grid-template-columns: 1fr 3fr 1fr;
+
+
+}
+
+nav {
+    height: 100%;
+    width: auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
+    grid-area: nav;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 1rem;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    background-color: var(--secondary-color);
 }
 
 #header-icon-container {
-    width: 5rem;
+    width: 50vw;
+    grid-area: icon;
+}
+
+#header-button-container {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    grid-area: button;
+}
+
+#header-button {
+    width: 3rem;
+    border: none;
+    height: 3rem;
+    border-radius: 50%;
 }
 
 /* Tablet */
@@ -68,5 +112,19 @@ header {
 
 /* Desktop */
 @media (min-width: 1200px) {
+
+    header {
+        grid-template-areas: "icon nav button";
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    #header-icon-container {
+        width: 6rem;
+        justify-self: start;
+    }
+
+    #header-button-container {
+        justify-self: end;
+    }
 
 }
