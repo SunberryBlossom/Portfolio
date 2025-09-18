@@ -90,6 +90,7 @@ nav {
     width: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     grid-area: button;
 }
 
@@ -100,13 +101,29 @@ nav {
     border-radius: 50%;
 }
 
+#header-button:active {
+    background-color: var(--secondary-color);
+}
+
 /* Tablet */
 @media (min-width: 600px) {
+    #header-icon-container {
+        width: 12rem;
+    }
     
 }
 
 /* small laptop */
 @media (min-width: 900px) {
+    #header-icon-container {
+        width: 9rem;
+    }
+
+    header {
+        grid-template-areas: 
+            "icon nav button";
+        grid-template-columns: 1fr 3fr 1fr;
+    }
 
 }
 
@@ -124,6 +141,7 @@ nav {
     }
 
     #header-button-container {
+
         justify-self: end;
     }
 
