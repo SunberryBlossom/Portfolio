@@ -140,7 +140,7 @@ nav {
 #second-title-h1 {
     position: absolute;
     top: 0rem;
-    left: 1.5rem;
+    left: 6.2rem;
     opacity: 0;
     animation: fadeIn 16s ease-in-out infinite;
 }
@@ -148,7 +148,7 @@ nav {
 #second-title-h2 {
     position: absolute;
     top: 3.2rem;
-    left: 3rem;
+    left: 7.3rem;
     opacity: 0;
     animation: fadeIn 16s ease-in-out infinite;
 }
@@ -233,6 +233,18 @@ nav {
     #header-button-container {
 
         justify-self: end;
+    }
+
+    #hero-section {
+        grid-template-areas: "text image";
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 0em 5rem;
+        height: auto;
+    }
+
+    #hero-image {
+        width: 100%;
     }
 
 }
