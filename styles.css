@@ -141,7 +141,6 @@ nav {
     position: absolute;
     top: 0rem;
     left: 1.5rem;
-    color: var(--primary-color);
     opacity: 0;
     animation: fadeIn 16s ease-in-out infinite;
 }
@@ -150,7 +149,6 @@ nav {
     position: absolute;
     top: 3.2rem;
     left: 3rem;
-    color: var(--accent-color);
     opacity: 0;
     animation: fadeIn 16s ease-in-out infinite;
 }
