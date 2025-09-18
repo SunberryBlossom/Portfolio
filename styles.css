@@ -44,3 +44,8 @@ ul,
 ol {
     list-style: none; 
 }
+
+#header-icon-container {
+    height: 60px;
+    width: 60px;
+}
