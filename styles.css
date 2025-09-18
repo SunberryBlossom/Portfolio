@@ -105,6 +105,54 @@ nav {
     background-color: var(--secondary-color);
 }
 
+.text-wrapper {
+    position: relative;
+    display: inline-block;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-title {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#hero-section {
+    display: grid;
+    border: 1px solid red;
+}
+
+#hero-text-container {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#second-title-h1 {
+    position: absolute;
+    top: 0rem;
+    left: 1.5rem;
+    color: var(--primary-color);
+}
+
+#second-title-h2 {
+    position: absolute;
+    top: 3.2rem;
+    left: 3rem;
+    color: var(--accent-color);
+}
+
+#hero-paragraph {
+   padding: 1rem 0 1rem 0;
+}
+
 /* Tablet */
 @media (min-width: 600px) {
     #header-icon-container {
