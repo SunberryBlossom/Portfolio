@@ -326,6 +326,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap:2rem;
 }
 
 #portfolio-title {
@@ -348,7 +349,7 @@ nav {
 }
 
 .project-info-section {
-    border: 1px solid red;
+    border: 1px solid white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -359,9 +360,10 @@ nav {
     height: 17.1rem;
     border-radius: 10px;
     color: white;
-    background-color: rgba(254, 1, 1, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     z-index: 1;
+    transition: opacity 0.3s ease;
 }
 
 .project-container:hover .project-info-section {
