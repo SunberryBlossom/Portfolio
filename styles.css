@@ -275,6 +275,41 @@ nav {
     width: 116%;
 }
 
+#skills-section {
+    text-align: center;
+    padding: 2rem 0 4rem 0;
+}
+
+#skills-title {
+    font-size: 2rem;
+}
+
+#skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.skill-container {
+    border: 2px solid red;
+    gap: 0.5rem;
+    width: 10rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.skill-container i {
+    font-size: 3rem;
+}
+
 /* Tablet */
 @media (min-width: 600px) {
     #header-icon-container {
