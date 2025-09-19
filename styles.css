@@ -15,7 +15,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-    padding: 0rem 3rem;
+    padding: 0rem
 }
 
 body {
@@ -249,7 +249,7 @@ nav {
 }
 
 #about-section {
-    padding: 2rem 4rem 0rem 2rem;
+    padding: 2rem 4rem 0rem;
     width: 100%;
     display: grid;
     grid-template-areas: 
@@ -276,7 +276,7 @@ nav {
 #about-paragraph {
     grid-area: paragraph;
     margin-left: 0.5rem;
-    width: 116%;
+    width: 100%;
 }
 
 #skills-section {
@@ -327,6 +327,7 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     gap:2rem;
+    padding: 2rem;
 }
 
 #portfolio-title {
@@ -389,6 +390,10 @@ nav {
     background-color: darkblue;
     transform: translate(0, -3px);
     box-shadow: 0 2px 4px black;
+}
+
+#experience-section {
+    background-color: grey;
 }
 
 
