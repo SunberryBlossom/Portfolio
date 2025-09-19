@@ -1,7 +1,12 @@
 :root {
-    --primary-color: #0078d4;
-    --secondary-color: #f3f3f3;
-    --accent-color: #ffb900;
+    --primary-color: #33452D;
+    --secondary-color: #577438;
+    --accent-color: #D4AF37;
+    --text-color: #f6f4cd;
+    --third-color: #182f13;
+    --fourth-color: #0f2e0e;
+    --fifth-color: #957560;
+
 }
 
 *,
@@ -20,7 +25,6 @@ html {
 
 body {
     /*font-family: Arial, Helvetica, sans-serif; */
-    background-color: #fff;
     color: #222;
     line-height: 1.6;
     min-height: 100vh;
@@ -50,7 +54,14 @@ h2, h1 {
     font-size: 2rem;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--text-color);
+}
+
 header {
+    background: linear-gradient(
+        90deg, var(--primary-color) 0%, 80%, var(--secondary-color) 100%);
+        color: var(--text-color);
     height: auto;
     width: 100%;
     display: grid;
@@ -62,8 +73,6 @@ header {
     justify-items: center;
     row-gap: 0.5rem;
     grid-template-columns: 1fr 3fr 1fr;
-
-
 }
 
 nav {
@@ -82,6 +91,7 @@ nav {
     margin: 0 0.5rem;
     transition: all 0.3s ease;
     transform: translate(0, 0);
+    color: var(--accent-color)
 
 }
 
@@ -141,6 +151,9 @@ nav {
 }
 
 #hero-section {
+    background: linear-gradient(
+        90deg, var(--primary-color) 0%, 80%, var(--secondary-color) 100%);
+    color: var(--surface-color);
     display: grid;
     grid-template-areas: 
         "text"
@@ -206,7 +219,6 @@ nav {
 }
 
 .hover-glow {
-    color: black;
     transition: color 0.5s ease;
 }
 
@@ -217,8 +229,8 @@ nav {
 #hero-button {
     padding: 0.75rem 1.5rem;
     border: none;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     border-radius: 33%;
     font-size: 1rem;
     cursor: pointer;
@@ -249,6 +261,8 @@ nav {
 }
 
 #about-section {
+    background: linear-gradient(
+        90deg, var(--primary-color) 0%, 80%, var(--secondary-color) 100%);
     padding: 2rem 4rem 0rem;
     width: 100%;
     display: grid;
@@ -265,7 +279,7 @@ nav {
 }
 
 #about-graphic {
-    border: 1px solid blue;
+    border: 1px solid var(--accent-color);
     position: relative;
     top: 14px;
     width: 50px;
@@ -277,11 +291,14 @@ nav {
     grid-area: paragraph;
     margin-left: 0.5rem;
     width: 100%;
+    padding-bottom: 2rem;
 }
 
 #skills-section {
     text-align: center;
     padding: 2rem 0 4rem 0;
+    background: var(--third-color);
+    background: radial-gradient(circle, var(--secondary-color) 0%, 30%, var(--fourth-color) 100%);
 }
 
 #skills-title {
@@ -313,8 +330,15 @@ nav {
 
 .skill-container:hover {
     box-shadow: 2px 2px 10px black;
-    background-color: red;
-    cursor: pointer;
+    background-color: var(--accent-color);
+}
+
+.skill-container p {
+    transition: color 0.3s ease;
+}
+
+.skill-container:hover p {
+    color: var(--fourth-color);
 }
 
 .skill-container i {
@@ -328,6 +352,8 @@ nav {
     justify-content: center;
     gap:2rem;
     padding: 2rem;
+    background: linear-gradient(
+        90deg, var(--primary-color) 0%, 80%, var(--secondary-color) 100%);
 }
 
 #portfolio-title {
@@ -360,11 +386,15 @@ nav {
     width: 20.1rem;
     height: 17.1rem;
     border-radius: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
     z-index: 1;
     transition: opacity 0.3s ease;
+}
+
+.project-info-section h3, .project-info-section p {
+    color: var(--accent-color);
+
 }
 
 .project-container:hover .project-info-section {
@@ -374,26 +404,27 @@ nav {
 
 .project-info-section a {
     display: inline-block;
-    background-color: blue;
+    background-color: var(--fourth-color);
     width: 7rem;
     border-radius: 5px;
     text-align: center;
     align-self: center;
     font-size: 1.1rem;
-    color: white;
+    color: var(--accent-color);
     position: relative;
     top: 3rem;
     transition: all 0.3s ease;
 }
 
 .project-info-section a:hover {
-    background-color: darkblue;
+    background-color: var(--accent-color);
+    color: var(--fourth-color);
     transform: translate(0, -3px);
     box-shadow: 0 2px 4px black;
 }
 
 #experience-section {
-    margin-top: 30px;
+    background: var(--third-color)
 }
 
 #experience-title {
@@ -424,17 +455,17 @@ nav {
 .experience-icon {
     width: 20px;
     height: 20px;
-    background-color: lightblue;
+    background-color: var(--accent-color);
     border-radius: 100%;
-    border: lightblue 1px solid;
-    box-shadow: 0px 0px 15px lightblue;
+    border: var(--accent-color) 1px solid;
+    box-shadow: 0px 0px 15px var(--accent-color);
     margin: 14px;
 }
 
 .experience-line {
     width: 2px;
     height: 80%;
-    background-color: blue;
+    background-color: var(--accent-color);
     margin: 0 auto;
 }
 
@@ -443,14 +474,16 @@ nav {
 }
 
 #contact-section {
-    border-top: 1px solid blue;
+    border-top: 1px solid var(--text-color);
     text-align: center;
     padding: 0 0 1rem 0;
+    background-color: var(--third-color);
 
 }
 
 #contact-title {
-    background-color: white;
+    background-color: var(--third-color);
+    color: var(--accent-color);
     padding: 0 0.5rem;
     width: auto;
     display: inline-block;
@@ -480,16 +513,21 @@ nav {
     padding: 1rem;
     border-radius: 10px;
     transition: all 0.3s ease;
-    background-color: var(--secondary-color);
+    background-color: var(--text-color);
+    opacity: 0.8;
 }
 
+.contact-container p {
+    color: var(--fourth-color);
+
+}
 .contact-container:hover {
     transform: translate(0, -10px);
     cursor: pointer;
 }
 
 footer {
-    background-color: var(--primary-color);
+    background: radial-gradient(circle, var(--secondary-color) 0%, 20%, var(--third-color) 100%);
     color: white;
     text-align: center;
     padding: 1rem;
