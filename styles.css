@@ -141,7 +141,6 @@ nav {
     grid-template-areas: 
         "text"
         "image";
-
 }
 
 #hero-text-container {
@@ -244,12 +243,41 @@ nav {
 #hero-image {
     width: 75%;
 }
+
+#about-section {
+    padding: 2rem 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "title title"
+        "graphic paragraph";
+}
+
+#about-title {
+    grid-area: title;
+    position: relative;
+    top: 0.5rem;
+}
+
+#about-graphic {
+    border: 1px solid blue;
+    position: relative;
+    top: 14px;
+    width: 50px;
+    height: 1px;
+    grid-area: graphic;
+}
+
+#about-paragraph {
+    grid-area: paragraph;
+    margin-left: 0.5rem;
+}
+
 /* Tablet */
 @media (min-width: 600px) {
     #header-icon-container {
         width: 12rem;
     }
-    
 }
 
 /* small laptop */
