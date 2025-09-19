@@ -245,7 +245,7 @@ nav {
 }
 
 #about-section {
-    padding: 2rem 1rem;
+    padding: 2rem 4rem 0rem 2rem;
     width: 100%;
     display: grid;
     grid-template-areas: 
@@ -256,6 +256,7 @@ nav {
 #about-title {
     grid-area: title;
     position: relative;
+    font-size: 2rem;
     top: 0.5rem;
 }
 
@@ -271,6 +272,7 @@ nav {
 #about-paragraph {
     grid-area: paragraph;
     margin-left: 0.5rem;
+    width: 116%;
 }
 
 /* Tablet */
@@ -306,7 +308,7 @@ nav {
     }
 
     #hero-image {
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -326,16 +328,14 @@ nav {
         justify-self: end;
     }
 
-    #hero-section {
-        grid-template-areas: "text image";
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        height: auto;
-
-    }
-
     #hero-image-container {
         margin-right: 2rem;
     }
+
+    #about-paragraph {
+    grid-area: paragraph;
+    margin-left: 0.5rem;
+    width: 100%;
+}
 
 }
