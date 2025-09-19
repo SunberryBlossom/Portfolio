@@ -15,6 +15,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    padding: 0rem 3rem;
 }
 
 body {
@@ -135,6 +136,7 @@ nav {
     align-items: center;
     padding: 1rem;
     grid-area: text;
+    text-align: center;
 }
 
 #second-title-h1 {
@@ -205,6 +207,10 @@ nav {
 
 /* small laptop */
 @media (min-width: 900px) {
+    html {
+        padding: 0rem;
+    }
+
     #header-icon-container {
         width: 9rem;
     }
@@ -215,14 +221,24 @@ nav {
         grid-template-columns: 1fr 3fr 1fr;
     }
 
+    #hero-section {
+        grid-template-areas: "text image";
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        height: auto;
+
+    }
+
+    #hero-image {
+        width: 100%;
+    }
 }
 
 /* Desktop */
 @media (min-width: 1200px) {
 
-    header {
-        grid-template-areas: "icon nav button";
-        grid-template-columns: 1fr 3fr 1fr;
+    html {
+        font-size: 18px;
     }
 
     #header-icon-container {
@@ -231,7 +247,6 @@ nav {
     }
 
     #header-button-container {
-
         justify-self: end;
     }
 
@@ -239,12 +254,12 @@ nav {
         grid-template-areas: "text image";
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        padding: 0em 5rem;
         height: auto;
+
     }
 
-    #hero-image {
-        width: 100%;
+    #hero-image-container {
+        margin-right: 2rem;
     }
 
 }
