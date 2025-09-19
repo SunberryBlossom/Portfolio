@@ -76,10 +76,18 @@ nav {
     display: inline-block;
     padding: 1rem;
     margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    transform: translate(0, 0);
+
 }
 
 .nav-link:hover {
-    background-color: var(--secondary-color);
+    transform: translate(0, -5px);
+    cursor: pointer;
+}
+
+.nav-link:active {
+        transform: translate(0, 0);
 }
 
 #header-icon-container {
@@ -187,9 +195,13 @@ nav {
    padding: 1rem 0 1rem 0;
 }
 
+.hover-glow {
+    color: black;
+    transition: color 0.5s ease;
+}
+
 #hero-text-container:hover .hover-glow {
     color: var(--accent-color);
-    transition: all 0.3s ease;
 }
 
 #hero-button {
@@ -197,7 +209,7 @@ nav {
     border: none;
     background-color: var(--primary-color);
     color: white;
-    border-radius: 30%;
+    border-radius: 33%;
     font-size: 1rem;
     cursor: pointer;
     width: 13rem;
@@ -207,7 +219,7 @@ nav {
 #hero-button:hover {
     background-color: var(--accent-color);
     transform: translate(0, -5px);
-    box-shadow: 0 2px 1px black;
+    box-shadow: 0 2px 4px black;
 }
 
 #hero-button:active {
