@@ -310,6 +310,11 @@ nav {
     #hero-image {
         width: 90%;
     }
+
+      #about-paragraph {
+    grid-area: paragraph;
+    margin-left: 0.5rem;
+    width: 100%;
 }
 
 /* Desktop */
@@ -331,11 +336,6 @@ nav {
     #hero-image-container {
         margin-right: 2rem;
     }
-
-    #about-paragraph {
-    grid-area: paragraph;
-    margin-left: 0.5rem;
-    width: 100%;
 }
 
 }
