@@ -393,7 +393,52 @@ nav {
 }
 
 #experience-section {
-    background-color: grey;
+    margin-top: 30px;
+}
+
+#experience-title {
+    position: relative;
+    top: -1.9rem;
+}
+
+.experience-article {
+    padding: 0 3rem;
+    display: grid;
+    grid-template-areas: 
+        "graph text";
+    grid-template-columns: 1fr 8fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.experience-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    grid-area: graph;
+}
+
+.experience-icon {
+    width: 20px;
+    height: 20px;
+    background-color: lightblue;
+    border-radius: 100%;
+    border: lightblue 1px solid;
+    box-shadow: 0px 0px 15px lightblue;
+    margin: 14px;
+}
+
+.experience-line {
+    width: 2px;
+    height: 80%;
+    background-color: blue;
+    margin: 0 auto;
+}
+
+.experience-text {
+    grid-area: text;
 }
 
 
@@ -458,6 +503,11 @@ nav {
     #hero-image-container {
         margin-right: 2rem;
     }
+
+    .experience-article {
+    padding: 0rem, 3rem;
+}
+
 }
 
 }
