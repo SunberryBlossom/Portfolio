@@ -28,13 +28,13 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 18px;
     scroll-behavior: smooth;
     padding: 0rem
 }
 
 body {
-    /*font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'EB Garamond', serif;
     color: #222;
     line-height: 1.6;
     min-height: 100vh;
@@ -66,6 +66,10 @@ h2, h1 {
 
 h1, h2, h3, h4, h5, h6, p {
     color: var(--text-color);
+}
+
+h1, h2 {
+    font-family: 'Cinzel Decorative', serif;
 }
 
 header {
@@ -189,16 +193,16 @@ nav {
 
 #second-title-h1 {
     position: absolute;
-    top: 0rem;
-    left: 6.2rem;
+    top: 1.6rem;
+    left: 5.5rem;
     opacity: 0;
     animation: fadeIn 16s ease-in-out infinite;
 }
 
 #second-title-h2 {
     position: absolute;
-    top: 3.2rem;
-    left: 6rem;
+    top: 4.8rem;
+    left: 5rem;
     opacity: 0;
     animation: fadeIn 16s ease-in-out infinite;
 }
@@ -450,7 +454,7 @@ nav {
 
 #experience-title {
     position: relative;
-    top: -1.9rem;
+    top: -1.5rem;
     padding-left: 1rem;
 }
 
@@ -515,8 +519,8 @@ nav {
     width: auto;
     display: inline-block;
     position: relative;
-    bottom: 2rem;
-    left: 25%;
+    bottom: 1.5rem;
+    left: 20%;
 }
 
 #contact-methods {
@@ -569,6 +573,14 @@ footer {
 @media (min-width: 600px) {
     #header-icon-container {
         width: 12rem;
+    }
+
+    #second-title-h1 {
+        left: 7.5rem;
+    }
+
+    #second-title-h2 {
+        left: 7rem;
     }
 }
 
