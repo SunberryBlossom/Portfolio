@@ -191,18 +191,8 @@ nav {
     text-align: center;
 }
 
-#second-title-h1 {
+.second-title-container {
     position: absolute;
-    top: 1.6rem;
-    left: 5.5rem;
-    opacity: 0;
-    animation: fadeIn 16s ease-in-out infinite;
-}
-
-#second-title-h2 {
-    position: absolute;
-    top: 4.8rem;
-    left: 5rem;
     opacity: 0;
     animation: fadeIn 16s ease-in-out infinite;
 }
@@ -324,6 +314,7 @@ nav {
 
 #skills-title {
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 #skills {
@@ -389,6 +380,7 @@ nav {
     width: 20rem;
     height: 17rem;
     border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .project-image {
@@ -449,7 +441,7 @@ nav {
 }
 
 #experience-section {
-    background: var(--third-color)
+    background: var(--third-color);
 }
 
 #experience-title {
@@ -574,14 +566,6 @@ footer {
     #header-icon-container {
         width: 12rem;
     }
-
-    #second-title-h1 {
-        left: 7.5rem;
-    }
-
-    #second-title-h2 {
-        left: 7rem;
-    }
 }
 
 /* small laptop */
@@ -606,7 +590,6 @@ footer {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         height: auto;
-
     }
 
     #hero-image {
@@ -620,7 +603,7 @@ footer {
     }
 
     #contact-title {
-    left: 40%;
+    left: 30%;
 }
 }
 
@@ -651,5 +634,9 @@ footer {
 
     .experience-article {
     padding: 0rem, 3rem;
+}
+
+#contact-title {
+    left: 38%;
 }
 }
