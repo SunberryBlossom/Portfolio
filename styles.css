@@ -275,7 +275,7 @@ nav {
 #about-section {
     background: linear-gradient(
         90deg, var(--primary-color) 0%, 80%, var(--secondary-color) 100%);
-    padding: 2rem 4rem 0rem;
+    padding: 2rem 2rem 0rem;
     width: 100%;
     display: grid;
     grid-template-areas: 
@@ -308,7 +308,7 @@ nav {
 
 #skills-section {
     text-align: center;
-    padding: 2rem 0 4rem 0;
+    padding: 2rem 0 2rem 0;
     background: linear-gradient(
         90deg, var(--primary-color) 0%, 80%, var(--secondary-color) 100%);}
 
@@ -328,7 +328,7 @@ nav {
 
 .skill-container {
     gap: 0.5rem;
-    width: 10rem;
+    width: 8rem;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
@@ -487,7 +487,7 @@ nav {
 
 .experience-line {
     width: 2px;
-    height: 80%;
+    height: 100%;
     background-color: var(--accent-color);
     margin: 0 auto;
 }
@@ -537,6 +537,8 @@ nav {
     transition: all 0.3s ease;
     background-color: var(--accent-color);
     opacity: 0.8;
+    border: 1px solid var(--accent-color);
+    box-shadow: 0px 0px 14px var(--accent-color);
 }
 
 .contact-container p {
