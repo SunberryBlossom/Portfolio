@@ -297,9 +297,8 @@ nav {
 #skills-section {
     text-align: center;
     padding: 2rem 0 4rem 0;
-    background: var(--third-color);
-    background: radial-gradient(circle, var(--secondary-color) 0%, 30%, var(--fourth-color) 100%);
-}
+    background: linear-gradient(
+        90deg, var(--primary-color) 0%, 80%, var(--secondary-color) 100%);}
 
 #skills-title {
     font-size: 2rem;
@@ -455,11 +454,17 @@ nav {
 .experience-icon {
     width: 20px;
     height: 20px;
-    background-color: var(--accent-color);
-    border-radius: 100%;
+    background: radial-gradient(circle, white 0%, 20%, var(--accent-color) 100%);
+    border-radius: 50%;
     border: var(--accent-color) 1px solid;
     box-shadow: 0px 0px 15px var(--accent-color);
     margin: 14px;
+    transition: all 0.3s ease;
+}
+
+.experience-article:hover .experience-icon {
+    box-shadow: 0px 0px 25px var(--accent-color);
+    background: radial-gradient(circle, white 0%, 50%, var(--accent-color) 100%);
 }
 
 .experience-line {
