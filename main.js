@@ -26,3 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
     setTheme(getTheme() === 'dark' ? 'light' : 'dark');
   });
 });
+
+const boxes = document.querySelectorAll('.skill-container, .project-container');
+
+boxes.forEach(b => b.classList.remove('active'));
+
+boxes.forEach(b => {
+  b.addEventListener('click', (e) => {
+    b.classList.toggle('active');
+    e.stopPropagation();
+  });
+});
+
+document.addEventListener('click', () => {
+  boxes.forEach(b => b.classList.remove('active'));
+});
