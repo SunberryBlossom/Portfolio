@@ -349,14 +349,16 @@ nav {
 .skill-container.active {
     box-shadow: 2px 2px 10px black;
     background-color: var(--accent-color);
+    color: black;
 }
 
 .skill-container p {
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.skill-container:hover p {
-    color: var(--fourth-color);
+.skill-container:hover p,
+.skill-container.active p {
+    color: black;
 }
 
 .skill-container i {
