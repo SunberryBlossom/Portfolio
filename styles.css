@@ -470,7 +470,7 @@ nav {
 }
 
 .experience-icon {
-    width: 20px;
+    width: 16px;
     height: 20px;
     background: radial-gradient(circle, white 0%, 20%, var(--accent-color) 100%);
     border-radius: 50%;
