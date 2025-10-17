@@ -157,11 +157,11 @@ nav {
 }
 
 .text-wrapper {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    grid-area: title;
 }
 
 .first-title {
@@ -182,13 +182,34 @@ nav {
 }
 
 #hero-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "text"
+        "buttons";
     padding: 1rem;
     grid-area: text;
     text-align: center;
+}
+
+#hero-button-container {
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+}
+
+#hero-button-1 {
+    grid-area: button1;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+#hero-button-2 {
+    grid-area: button2;
+    margin: 0 auto;
+    margin-top: 1rem;
 }
 
 .second-title-container {
@@ -227,6 +248,7 @@ nav {
 
 #hero-paragraph {
    padding: 1rem 0 1rem 0;
+   grid-area: text;
 }
 
 .hover-glow {
@@ -237,7 +259,7 @@ nav {
     color: var(--accent-color);
 }
 
-#hero-button {
+.hero-button {
     padding: 0.75rem 1.5rem;
     border: none;
     background-color: var(--secondary-color);
@@ -249,7 +271,7 @@ nav {
     transition: all 0.2s ease;
 }
 
-#hero-button:hover {
+.hero-button:hover {
     background-color: var(--accent-color);
     transform: translate(0, -5px);
     box-shadow: 0 2px 4px black;
