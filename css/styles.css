@@ -227,6 +227,21 @@ footer {
 
 @media screen and (min-width: 1024px) {
 
+    .cta-button, .skill-card {
+        transition: all 0.4s ease;
+    }
+
+    .cta-button:hover {
+        color: var(--secondary-accent-color);
+        transform: translateY(-10px);
+        box-shadow: 6px 6px 6px grey;
+    }
+
+    .cta-button:active {
+        transform: translateY(1px);
+        box-shadow: 0px 0px 6px grey;
+    }
+
     .hero-section {
         display: grid;
         grid-template-areas:
@@ -258,6 +273,14 @@ footer {
     .navbar ul {
         font-size: 2rem;
         width: 100%;
+    }
+
+    a {
+        transition: all 0.5s ease;
+    }
+
+    a:hover {
+        color: var(--primary-accent-color);
     }
 
     .navbar::before {
@@ -294,5 +317,9 @@ footer {
         display: inline-block;
         text-align: center;
         font-size: 2em;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-10px);
     }
 }
