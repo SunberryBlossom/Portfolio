@@ -34,8 +34,8 @@ header {
     z-index: 10;
     top: 0;
     background-color: var(--primary-color);
-    width: 100vw;
-    height: 15vh;
+    width: 100%;
+    min-height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,7 +76,6 @@ header {
 }
 
 .hero-section {
-    min-height: 85vh;
     height: auto;
     display: flex;
     justify-content: center;
@@ -84,7 +83,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .hero-image-section {
@@ -96,6 +95,8 @@ header {
 
 .hero-image-container {
     width: 75vw;
+    max-width: 500px;
+    max-height: 500px;
     height: 75vw;
     border-radius: 50%;
     background-color: var(--primary-accent-color);
@@ -104,11 +105,11 @@ header {
 }
 
 #hero-image {
-    width: 100%;
+    width: 99%;
     transform: scale(1.1);
     clip-path: ellipse(52% 50.4% at 50% 50%);
     position: relative;
-    top: -40%;
+    top: -38.6%;
 }
 
 .hero-content-section {
@@ -215,4 +216,83 @@ footer {
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
+}
+
+@media screen and (min-width: 728px) {
+    .navbar ul {
+        font-size: 1.5rem;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .hero-section {
+        display: grid;
+        grid-template-areas:
+        'text image'
+        'button image';
+        justify-items: center;
+        align-items: center;
+        height: 85vh;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-image-container {
+        grid-area: image;
+    }
+
+    .hero-content-section {
+        grid-area: text;
+    }
+
+    #hero-button {
+        grid-area: button;
+    }
+
+    .navbar {
+        width: 50%;
+    }
+
+    .navbar ul {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .navbar::before {
+        display: none;
+    }
+
+    .hero-content-section h1 {
+    font-size: 3rem;
+    }
+
+    .hero-content-section p {
+        font-size: 2rem;
+    }
+
+    header {
+        padding: 10px 20px;
+        height: 15vh;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 15%;
+    }
+
+    .logo p {
+        display: inline-block;
+        text-align: center;
+        font-size: 2em;
+    }
 }
