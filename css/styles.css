@@ -124,9 +124,11 @@ header {
     border: none;
     background-color: var(--ink);
     color: var(--primary-color);
-    border-radius: 5px;
+    border: 1px solid var(--secondary-accent-color);
+    border-radius: 10px;
     font-family: 'Cinzel Decorative', serif;
     font-weight: bolder;
+    box-shadow: 3px 3px 3px grey;
 }
 
 .skill-section {
@@ -167,4 +169,31 @@ header {
 
 .skill-card i {
     font-size: 50px;
+}
+
+.social-media-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    color: var(--ink);
+}
+
+.contact-card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-card-container h3 {
+    display: inline-block;
+}
+
+.contact-card {
+    width: 170px;
+    padding: 10px;
 }
