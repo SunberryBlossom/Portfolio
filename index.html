@@ -1,11 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | Vira Mariesdotter</title>
 
-</body>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="https://kit.fontawesome.com/638957e651.js" crossorigin="anonymous"></script>
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="assets/coin_icon.png">
+                <p>E.R. Mariesdotter</p>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-me.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="hero-section">
+                <div class="hero-image-section">
+                    <div class="hero-image-container">
+                        <img id="hero-image" src="assets/hero-image.png">
+                    </div>
+                </div>
+                <div class="hero-content-section">
+                    <h1>Mae govannen! Call me Vira</h1>
+                    <p>A .NET fullstack system developer based in Stockholm Sweden, with an obsession for data-intensive applications.</p>
+                    <button class="cta-button" id="hero-button">Let's work together</button>
+                </div>
+            </section>
+            <section class="skill-section">
+                <h2>My current skill set</h2>
+                <div class="skill-card-container">
+                    <div class="skill-card">
+                        <h3>Html 5</h3>
+                        <i class="fa-brands fa-html5" style="color: rgb(221, 75, 37);"></i>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Css 3</h3>
+                        <i class="fa-brands fa-css3" style="color: rgb(53, 149, 207);"></i>
+                    </div>
+                    <div class="skill-card">
+                        <h3>JS</h3>
+                        <i class="fa-brands fa-square-js" style="color: rgb(239, 216, 29);"></i>
+                    </div>
+                    <div class="skill-card">
+                        <h3>React</h3>
+                        <i class="fa-brands fa-react" style="color: rgb(94, 211, 243);"></i>
+                    </div>
+                    <div class="skill-card">
+                        <h3>C# | .Net</h3>
+                        <i class="fa-solid fa-code" style="color: rgb(167, 108, 225);"></i>
+                    </div>
+                    <div class="skill-card">
+                        <h3>T-sql | Postgres</h3>
+                        <i class="fa-solid fa-database" style="color: rgb(49, 100, 140);"></i>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Docker</h3>
+                        <i class="fa-brands fa-docker" style="color: rgb(19, 83, 210);"></i>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Git</h3>
+                        <i class="fa-brands fa-git-alt" style="color: rgb(232, 77, 49);"></i>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Rest | Soap</h3>
+                        <i class="fa-solid fa-server" style="color: rgb(95, 94, 94);"></i>
+                    </div>
+                </div>
+            </section>
+            <section class="social-media-section">
+                <h2>Get in touch with me!</h2>
+                <div class="contact-card-container">
+                    <a target="_blank" href="mailto:wooden_anemone@pm.me">
+                        <div class="contact-card cta-button">
+                            <i class="fa-solid fa-at"></i>
+                            <h3>Mail</h3>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/elviramariesdotter/">
+                        <div class="contact-card cta-button">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <h3>LinkedIn</h3>
+                        </div>
+                    </a>
+                    <a target="_blank" href="tel:+46709421135">
+                        <div class="contact-card cta-button">
+                            <i class="fa-solid fa-phone"></i>
+                            <h3>Phone</h3>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://github.com/SunberryBlossom">
+                        <div class="contact-card cta-button">
+                            <i class="fa-brands fa-github"></i>
+                            <h3>GitHub</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&COPY; 2026 Elvira Rebecca Mariesdotter. All rights reserved.</p>
+        </footer>
+    </body>
 </html>
