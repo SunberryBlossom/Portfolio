@@ -3,6 +3,7 @@
     --secondary-color: #3d2200;
     --primary-accent-color: #666748;
     --secondary-accent-color: #dab230;
+    --ink: #402f21;
     box-sizing: border-box;
 }
 
@@ -16,6 +17,7 @@ html {
     font-family: 'EB Garamond', serif;
     scroll-behavior: smooth;
     background-color: var(--primary-color);
+    font-size: 1.2rem;
 }
 
 h1, h2, h3 {
@@ -23,10 +25,11 @@ h1, h2, h3 {
 }
 
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     background-color: var(--primary-color);
     width: 100vw;
+    height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +67,7 @@ header {
 }
 
 .hero-section {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
 }
@@ -77,12 +80,12 @@ header {
 }
 
 .hero-image-container {
-    width: 60vw;
-    height: 60vw;
+    width: 63vw;
+    height: 63vw;
     border-radius: 50%;
     background-color: var(--primary-accent-color);
     position: relative;
-    top: 14%;
+    top: 5%;
 }
 
 #hero-image {
@@ -95,4 +98,31 @@ header {
 
 .hero-content-section {
     height: 50%;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-content-section h1 {
+    font-size: 1.7rem;
+}
+
+.hero-content-section p {
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    width: 170px;
+    height: 40px;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--ink);
+    color: var(--secondary-accent-color);
+    border-radius: 5px;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: bolder;
 }
