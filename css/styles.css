@@ -1,17 +1,15 @@
 :root {
-    --primary-color: #f7f6df;
+    --primary-color: #E5E0DA;
     --secondary-color: #3d2200;
-    --primary-accent-color: #0f2e0e;
-    --secondary-accent-color: #D4AF37;
-    --white-soft: #f9f9f4;
-
-    --primary-background-color: linear-gradient(to right, var(--primary-color) 80%, var(--white-soft));
+    --primary-accent-color: #2d602a;
+    --secondary-accent-color: #dab230;
+    box-sizing: border-box;
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
@@ -21,128 +19,4 @@ html {
 
 h1, h2, h3 {
     font-family: 'Cinzel Decorative', serif;
-    color: var(--primary-accent-color);
-}
-
-a {
-    text-decoration: none;
-    color: var(--primary-accent-color);
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 15px;
-    background: var(--primary-background-color);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1001;
-}
-
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo-img {
-    width: 50px;
-}
-
-#logo-text {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: var(--primary-accent-color);
-}
-
-.menu-trigger {
-    background: none;
-    border: none;
-    color: var(--primary-accent-color);
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1100;
-    position: relative;
-}
-
-.modal {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--primary-background-color);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-}
-
-
-.modal.active {
-    top: 0;
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-.modal-nav li {
-    margin: 20px 0;
-}
-
-.modal-nav a {
-    font-size: 1.8rem;
-}
-
-.cta-button {
-    padding: 10px 20px;
-    background: var(--primary-accent-color);
-    color: var(--primary-color);
-    border-radius: 4px;
-    font-family: 'Cinzel Decorative', serif;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.skill-card {
-    text-align: center;
-    padding: 15px;
-    background: var(--white-soft);
-    border-radius: 8px;
-}
-
-.skill-card i {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-footer {
-    padding: 20px;
-    text-align: center;
-    background: var(--secondary-color);
-    color: var(--primary-color);
-}
-
-footer a {
-    color: var(--secondary-accent-color);
-    display: block;
-    margin-top: 10px;
 }
