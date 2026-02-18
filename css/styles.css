@@ -13,11 +13,16 @@
     box-sizing: inherit;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 html {
     font-family: 'EB Garamond', serif;
     scroll-behavior: smooth;
     background-color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 h1, h2, h3 {
@@ -54,10 +59,13 @@ header {
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     list-style: none;
+    font-size: 1.2rem;
+    gap: 5px;
 }
 
-.navbar::before {
+.navbar::before, footer::before {
     content: "";
     border-top: 1px solid var(--primary-accent-color);
     display: block;
@@ -68,10 +76,15 @@ header {
 }
 
 .hero-section {
-    height: 85vh;
+    min-height: 85vh;
+    height: auto;
     display: flex;
+    justify-content: center;
+    gap: 40px;
     flex-direction: column;
-    padding-bottom: 10px;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 50px;
 }
 
 .hero-image-section {
@@ -82,8 +95,8 @@ header {
 }
 
 .hero-image-container {
-    width: 63vw;
-    height: 63vw;
+    width: 75vw;
+    height: 75vw;
     border-radius: 50%;
     background-color: var(--primary-accent-color);
     position: relative;
@@ -99,12 +112,12 @@ header {
 }
 
 .hero-content-section {
-    height: 50%;
     color: var(--ink);
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    gap: 20px;
     text-align: center;
+    justify-content: center;
     align-items: center;
     padding: 20px;
 }
@@ -196,4 +209,10 @@ header {
 .contact-card {
     width: 170px;
     padding: 10px;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
 }
