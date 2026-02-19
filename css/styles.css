@@ -406,4 +406,19 @@ footer {
     .skill-card:hover {
         transform: translateY(-10px);
     }
+
+    .story-info-section {
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    }
+
+    .story-image-container img {
+        border-radius: 10px;
+        border: 1px solid var(--secondary-accent-color);
+    }
+
+    .story-content-container {
+       padding: 50px;
+    }
 }
