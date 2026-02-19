@@ -65,6 +65,27 @@ header {
     gap: 5px;
 }
 
+.navbar a::before {
+   content: "";
+   position: absolute;
+   bottom: -3px;
+   left: 0;
+   width: 0;
+   height: 2px;
+   background-color: var(--ink);
+   transition: all .3s ease;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+    background-color: var(--primary-accent-color);
+}
+
+.navbar a {
+    transition: all 1s ease;
+    position: relative;
+}
+
 .navbar::before, footer::before {
     content: "";
     border-top: 1px solid var(--primary-accent-color);
@@ -212,6 +233,63 @@ header {
     padding: 10px;
 }
 
+.story-info-section {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: var(--ink);
+}
+
+.story-image-container img {
+    width: 100%;
+}
+
+.story-content-container {
+    padding: 20px;
+    text-align: justify;
+}
+
+.journey-info-section {
+        color: var(--ink);
+}
+
+#experience-title {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    padding-left: 3rem;
+}
+
+.experience-article {
+    font-size: 1.2rem;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-areas:
+        "graph text";
+    grid-template-columns: 1fr 8fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.experience-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    grid-area: graph;
+}
+
+.experience-line {
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-accent-color);
+    margin: 0 auto;
+}
+
+.experience-text {
+    grid-area: text;
+}
+
 footer {
     padding-top: 20px;
     padding-bottom: 10px;
@@ -223,11 +301,19 @@ footer {
         font-size: 1.5rem;
         padding: 0 30px;
     }
+
+    .story-info-section {
+    font-size: 1.7rem;
+}
 }
 
 @media screen and (min-width: 1024px) {
 
-    .cta-button, .skill-card {
+    .hero-section:hover span {
+        color: var(--secondary-accent-color)
+    }
+
+    .cta-button, .skill-card, span {
         transition: all 0.4s ease;
     }
 
@@ -250,8 +336,8 @@ footer {
         justify-items: center;
         align-items: center;
         height: 85vh;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .hero-image-container {
@@ -264,6 +350,7 @@ footer {
 
     #hero-button {
         grid-area: button;
+        cursor: pointer;
     }
 
     .navbar {
@@ -275,9 +362,6 @@ footer {
         width: 100%;
     }
 
-    a {
-        transition: all 0.5s ease;
-    }
 
     a:hover {
         color: var(--primary-accent-color);
@@ -321,5 +405,20 @@ footer {
 
     .skill-card:hover {
         transform: translateY(-10px);
+    }
+
+    .story-info-section {
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    }
+
+    .story-image-container img {
+        border-radius: 10px;
+        border: 1px solid var(--secondary-accent-color);
+    }
+
+    .story-content-container {
+       padding: 50px;
     }
 }
