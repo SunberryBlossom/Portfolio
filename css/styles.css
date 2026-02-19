@@ -249,6 +249,47 @@ header {
     text-align: justify;
 }
 
+.journey-info-section {
+        color: var(--ink);
+}
+
+#experience-title {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    padding-left: 3rem;
+}
+
+.experience-article {
+    font-size: 1.2rem;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-areas:
+        "graph text";
+    grid-template-columns: 1fr 8fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.experience-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    grid-area: graph;
+}
+
+.experience-line {
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-accent-color);
+    margin: 0 auto;
+}
+
+.experience-text {
+    grid-area: text;
+}
+
 footer {
     padding-top: 20px;
     padding-bottom: 10px;
