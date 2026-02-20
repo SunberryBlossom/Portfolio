@@ -153,8 +153,9 @@ header {
 }
 
 .cta-button {
-    width: 180px;
-    padding: 7px;
+    display: inline-block;
+    width: auto;
+    padding: 10px 30px;
     font-size: 1rem;
     border: none;
     background-color: var(--ink);
@@ -165,6 +166,10 @@ header {
     font-weight: bolder;
     box-shadow: 3px 3px 3px grey;
 }
+
+.secondary-portfolio-section .cta-button {
+        box-shadow: 3px 3px 3px black;
+    }
 
 .skill-section {
     background-color: var(--secondary-color);
@@ -290,6 +295,89 @@ header {
     grid-area: text;
 }
 
+.primary-portfolio-section {
+    color: var(--ink);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio-card-container {
+    font-size: 1rem;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.portfolio-card {
+    position: relative;
+    height: 250px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 3px 3px 5px var(--ink);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio-card-content {
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 5px;
+    top: -59px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top: 1px solid var(--ink);
+}
+
+.secondary-portfolio-section {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    color: var(--secondary-accent-color);
+}
+
+.secondary-portfolio-section img {
+    height: 100%;
+    width: 100%;
+    filter: blur(2px);
+}
+
+.secondary-text-container {
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    gap: 10px;
+}
+
 footer {
     padding-top: 20px;
     padding-bottom: 10px;
@@ -305,15 +393,43 @@ footer {
     .story-info-section {
     font-size: 1.7rem;
 }
+
+    .secondary-text-container {
+        gap: 20px;
+        font-size: 1.7rem;
+    }
+
+    .secondary-text-container a {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .secondary-text-container {
+        top: 30%;
+        padding: 20px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+
+    .secondary-portfolio-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .secondary-portfolio-section {
+        overflow: hidden;
+        width: auto;
+        max-height: 85vh;
+    }
 
     .hero-section:hover span {
         color: var(--secondary-accent-color)
     }
 
-    .cta-button, .skill-card, span {
+    .cta-button, .skill-card, span, .portfolio-card {
         transition: all 0.4s ease;
     }
 
@@ -321,6 +437,17 @@ footer {
         color: var(--secondary-accent-color);
         transform: translateY(-10px);
         box-shadow: 6px 6px 6px grey;
+    }
+
+    .secondary-portfolio-section .cta-button:hover {
+        color: var(--secondary-accent-color);
+        transform: translateY(-10px);
+        box-shadow: 6px 6px 6px black;
+    }
+
+    .secondary-portfolio-section .cta-button:active {
+        transform: translateY(1px);
+        box-shadow: 0px 0px 6px black;
     }
 
     .cta-button:active {
@@ -403,8 +530,14 @@ footer {
         font-size: 2em;
     }
 
-    .skill-card:hover {
+    .skill-card:hover{
         transform: translateY(-10px);
+    }
+
+    .portfolio-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 6px 6px 6px var(--ink);
+        cursor: pointer;
     }
 
     .story-info-section {
