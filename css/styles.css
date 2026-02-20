@@ -153,6 +153,7 @@ header {
 }
 
 .cta-button {
+    display: inline-block;
     width: auto;
     padding: 10px 30px;
     font-size: 1rem;
@@ -165,6 +166,10 @@ header {
     font-weight: bolder;
     box-shadow: 3px 3px 3px grey;
 }
+
+.secondary-portfolio-section .cta-button {
+        box-shadow: 3px 3px 3px black;
+    }
 
 .skill-section {
     background-color: var(--secondary-color);
@@ -420,15 +425,11 @@ footer {
         max-height: 85vh;
     }
 
-    .secondary-portfolio-section .cta-button {
-        box-shadow: 3px 3px 3px black;
-    }
-
     .hero-section:hover span {
         color: var(--secondary-accent-color)
     }
 
-    .cta-button, .skill-card, span {
+    .cta-button, .skill-card, span, .portfolio-card {
         transition: all 0.4s ease;
     }
 
@@ -442,6 +443,11 @@ footer {
         color: var(--secondary-accent-color);
         transform: translateY(-10px);
         box-shadow: 6px 6px 6px black;
+    }
+
+    .secondary-portfolio-section .cta-button:active {
+        transform: translateY(1px);
+        box-shadow: 0px 0px 6px black;
     }
 
     .cta-button:active {
@@ -524,8 +530,14 @@ footer {
         font-size: 2em;
     }
 
-    .skill-card:hover {
+    .skill-card:hover{
         transform: translateY(-10px);
+    }
+
+    .portfolio-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 6px 6px 6px var(--ink);
+        cursor: pointer;
     }
 
     .story-info-section {
