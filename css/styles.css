@@ -4,6 +4,7 @@
     --primary-accent-color: #666748;
     --secondary-accent-color: #dab230;
     --ink: #402f21;
+    --dark-green: #023205;
     box-sizing: border-box;
 }
 
@@ -167,8 +168,9 @@ header {
     box-shadow: 3px 3px 3px grey;
 }
 
-.secondary-portfolio-section .cta-button {
+.secondary-portfolio-section .cta-button, .ats-resume-button-container .cta-button {
         box-shadow: 3px 3px 3px black;
+        background-color: var(--dark-green);
     }
 
 .skill-section {
@@ -661,7 +663,7 @@ footer {
         box-shadow: 6px 6px 6px grey;
     }
 
-    .secondary-portfolio-section .cta-button:hover {
+    .secondary-portfolio-section .cta-button:hover, .ats-resume-button-container .cta-button:hover{
         color: var(--secondary-accent-color);
         transform: translateY(-10px);
         box-shadow: 6px 6px 6px black;
