@@ -800,3 +800,50 @@ footer {
     align-items: start;
 }
 }
+
+
+@media print {
+    header, 
+    .navbar, 
+    footer, 
+    .cta-button, 
+    .resume-ats-section,
+    .social-media-section,
+    .resume-contact-section, 
+    img,
+    #resume-skills {
+        display: none !important;
+    }
+
+    body, html {
+        background-color: white !important;
+        color: black !important;
+        font-size: 11pt;
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .resume-section {
+        display: block;
+        padding: 0;
+    }
+
+    h2, h3, h4 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    .education-container,
+    .experience-article,
+    .skill-bar-container,
+    #resume-skills,
+    #resume-intro {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
