@@ -336,7 +336,6 @@ header {
 
 .resume-section img {
     width: 100%;
-    max-width: 500px;
     border-radius: 20px;
     padding-bottom: 20px;
     grid-area: image;
@@ -352,6 +351,7 @@ header {
 
 .resume-contact-section h2 {
     font-size: 1.2rem;
+    color: var(--ink);
 }
 
 .resume-cta-buttons-container {
@@ -372,6 +372,7 @@ header {
     flex-direction: column;
     gap: 20px;
     color: var(--ink);
+    grid-area: education;
 }
 
 .education-container {
@@ -588,6 +589,41 @@ footer {
     .secondary-text-container a {
         font-size: 1.4rem;
     }
+
+    .resume-section {
+    position: relative;
+    grid-template-areas:
+    "image intro"
+    "summary summary"
+    "skills skills"
+    "education education";
+    grid-template-columns: 1fr 2fr;
+    column-gap: 40px;
+    align-items: start;
+}
+
+.resume-section img {
+    align-self: center;
+}
+
+#resume-intro h2 {
+    font-size: 1.2rem;
+}
+
+#resume-intro {
+    height: 100%;
+    align-self: start;
+    }
+
+    .resume-section img {
+        margin-bottom: 0;
+    }
+
+    #resume-title {
+    text-align: left;
+    padding-left: 25px;
+    padding-top: 40px;
+}
 }
 
 @media screen and (min-width: 425px) {
@@ -740,4 +776,16 @@ footer {
     .story-content-container {
        padding: 50px;
     }
+
+    .resume-section {
+    position: relative;
+    grid-template-areas:
+    "image summary"
+    "intro summary"
+    "intro skills"
+    "education education";
+    grid-template-columns: 1fr 2fr;
+    column-gap: 40px;
+    align-items: start;
+}
 }
