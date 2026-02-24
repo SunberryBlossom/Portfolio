@@ -349,15 +349,27 @@ header {
     align-items: center;
     font-size: 1.2rem;
     color: var(--ink);
+    /* This will have to be updated to GRID */
 }
 
-#expertise-summary {
+#expertise-summary, #resume-intro {
+    position: relative;
     border: 1px solid green;
     display: flex;
     flex-direction: column;
     text-align: justify;
     padding: 10px;
     gap: 20px;
+}
+
+#resume-intro h2 {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#resume-intro #subtitle-resume-intro {
+    position: absolute;
+    top: 83px;
 }
 
 .portfolio-card-content {
