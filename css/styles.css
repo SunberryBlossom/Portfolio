@@ -4,6 +4,7 @@
     --primary-accent-color: #666748;
     --secondary-accent-color: #dab230;
     --ink: #402f21;
+    --dark-green: #023205;
     box-sizing: border-box;
 }
 
@@ -167,9 +168,19 @@ header {
     box-shadow: 3px 3px 3px grey;
 }
 
-.secondary-portfolio-section .cta-button {
+.secondary-portfolio-section .cta-button, .ats-resume-button-container .cta-button {
         box-shadow: 3px 3px 3px black;
+        background-color: var(--dark-green);
     }
+
+.navbar a.active-page::before {
+    width: 100%;
+    background-color: var(--secondary-accent-color);
+}
+
+.navbar a.active-page {
+    color: var(--secondary-accent-color);
+}
 
 .skill-section {
     background-color: var(--secondary-color);
@@ -334,6 +345,189 @@ header {
     border-radius: 10px;
 }
 
+.resume-section img {
+    width: 100%;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    grid-area: image;
+}
+
+.resume-contact-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.resume-contact-section h2 {
+    font-size: 1.2rem;
+    color: var(--ink);
+}
+
+.resume-cta-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.resume-cta-buttons-container a {
+    width: 180px;
+}
+
+#resume-education {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--ink);
+    grid-area: education;
+}
+
+.education-container {
+    text-align: justify;
+    padding: 20px;
+    font-size: 1.3rem;
+    color: var(--ink);
+}
+
+.education-container h3 {
+    font-size: 1.25rem;
+}
+
+.section-header {
+    display: block;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.resume-section {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: var(--ink);
+    justify-items: center;
+    display: grid;
+    grid-template-areas:
+    "image"
+    "intro"
+    "summary"
+    "skills"
+    "education"
+    "work";
+}
+
+.resume-ats-section {
+    background-color: var(--secondary-color);
+    color: var(--secondary-accent-color);
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.resume-ats-section h2 {
+    padding-bottom: 20px;
+}
+
+.ats-resume-button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resume-ats-section div:first-child {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+
+}
+
+.ats-resume-button-container a {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+#expertise-summary, #resume-intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    gap: 20px;
+}
+
+#expertise-summary {
+    grid-area: summary;
+    padding-bottom: 40px;
+}
+
+#resume-intro {
+    grid-area: intro;
+}
+
+#resume-intro h2 {
+    font-size: 1.5rem;
+}
+
+#resume-skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    grid-area: skills;
+    padding-bottom: 40px;
+}
+
+#resume-skills h2 {
+    margin-bottom: 20px;
+}
+
+.resume-skill-title {
+    padding-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.resume-skill-title:last-child {
+    margin: 0;
+    padding: 0;
+}
+
+.resume-skill-title::after {
+    content: '';
+  position: absolute;
+  left: 0;
+  top: 32px;
+  height: 6px;
+  width: 100%;
+
+  background: linear-gradient(to right, var(--secondary-accent-color) var(--progress), var(--ink) var(--progress)
+  );
+
+  border-radius: 2px;
+}
+
+#resume-intro h2 {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#resume-intro .subtitle {
+    position: absolute;
+     top: 37px;
+}
+
+.subtitle {
+    opacity: 0.7;
+}
+
 .portfolio-card-content {
     color: var(--primary-color);
     display: flex;
@@ -384,6 +578,11 @@ footer {
     text-align: center;
 }
 
+#resume-title {
+    text-align: center;
+    color: var(--ink);
+}
+
 @media screen and (min-width: 728px) {
     .navbar ul {
         font-size: 1.5rem;
@@ -402,6 +601,41 @@ footer {
     .secondary-text-container a {
         font-size: 1.4rem;
     }
+
+    .resume-section {
+    position: relative;
+    grid-template-areas:
+    "image intro"
+    "summary summary"
+    "skills skills"
+    "education education";
+    grid-template-columns: 1fr 2fr;
+    column-gap: 40px;
+    align-items: start;
+}
+
+.resume-section img {
+    align-self: center;
+}
+
+#resume-intro h2 {
+    font-size: 1.2rem;
+}
+
+#resume-intro {
+    height: 100%;
+    align-self: start;
+    }
+
+    .resume-section img {
+        margin-bottom: 0;
+    }
+
+    #resume-title {
+    text-align: left;
+    padding-left: 25px;
+    padding-top: 40px;
+}
 }
 
 @media screen and (min-width: 425px) {
@@ -439,7 +673,7 @@ footer {
         box-shadow: 6px 6px 6px grey;
     }
 
-    .secondary-portfolio-section .cta-button:hover {
+    .secondary-portfolio-section .cta-button:hover, .ats-resume-button-container .cta-button:hover{
         color: var(--secondary-accent-color);
         transform: translateY(-10px);
         box-shadow: 6px 6px 6px black;
@@ -553,5 +787,64 @@ footer {
 
     .story-content-container {
        padding: 50px;
+    }
+
+    .resume-section {
+    position: relative;
+    grid-template-areas:
+    "image summary"
+    "intro summary"
+    "intro skills"
+    "education education";
+    grid-template-columns: 1fr 2fr;
+    column-gap: 40px;
+    align-items: start;
+}
+}
+
+
+@media print {
+    header, 
+    .navbar, 
+    footer, 
+    .cta-button, 
+    .resume-ats-section,
+    .social-media-section,
+    .resume-contact-section, 
+    img,
+    #resume-skills {
+        display: none !important;
+    }
+
+    body, html {
+        background-color: white !important;
+        color: black !important;
+        font-size: 11pt;
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .resume-section {
+        display: block;
+        padding: 0;
+    }
+
+    h2, h3, h4 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    .education-container,
+    .experience-article,
+    .skill-bar-container,
+    #resume-skills,
+    #resume-intro {
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 }
