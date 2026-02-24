@@ -336,16 +336,42 @@ header {
 
 .resume-section img {
     width: 100%;
-    object-fit: cover;
+    max-width: 500px;
     border-radius: 20px;
     padding-bottom: 20px;
     grid-area: image;
+}
+
+#resume-education {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--ink);
+}
+
+.education-container {
+    text-align: justify;
+    padding: 20px;
+    font-size: 1.3rem;
+    color: var(--ink);
+}
+
+.education-container h3 {
+    font-size: 1.25rem;
+}
+
+.section-header {
+    display: block;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 .resume-section {
     padding: 20px;
     font-size: 1.2rem;
     color: var(--ink);
+    justify-items: center;
     display: grid;
     grid-template-areas:
     "image"
@@ -367,10 +393,15 @@ header {
 
 #expertise-summary {
     grid-area: summary;
+    padding-bottom: 40px;
 }
 
 #resume-intro {
     grid-area: intro;
+}
+
+#resume-intro h2 {
+    font-size: 1.5rem;
 }
 
 #resume-skills {
@@ -379,10 +410,11 @@ header {
     flex-direction: column;
     position: relative;
     grid-area: skills;
+    padding-bottom: 40px;
 }
 
 #resume-skills h2 {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .resume-skill-title {
@@ -410,9 +442,13 @@ header {
     padding-bottom: 10px;
 }
 
-#resume-intro #subtitle-resume-intro {
+#resume-intro .subtitle {
     position: absolute;
-    top: 83px;
+     top: 37px;
+}
+
+.subtitle {
+    opacity: 0.7;
 }
 
 .portfolio-card-content {
@@ -468,10 +504,6 @@ footer {
 #resume-title {
     text-align: center;
     color: var(--ink);
-}
-
-.resume-section {
-    border: 1px solid red;
 }
 
 @media screen and (min-width: 728px) {
