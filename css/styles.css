@@ -173,6 +173,15 @@ header {
         background-color: var(--dark-green);
     }
 
+.navbar a.active-page::before {
+    width: 100%;
+    background-color: var(--secondary-accent-color);
+}
+
+.navbar a.active-page {
+    color: var(--secondary-accent-color);
+}
+
 .skill-section {
     background-color: var(--secondary-color);
     color: var(--secondary-accent-color);
