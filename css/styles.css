@@ -342,6 +342,31 @@ header {
     grid-area: image;
 }
 
+.resume-contact-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.resume-contact-section h2 {
+    font-size: 1.2rem;
+}
+
+.resume-cta-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.resume-cta-buttons-container a {
+    width: 180px;
+}
+
 #resume-education {
     display: flex;
     flex-direction: column;
@@ -380,6 +405,39 @@ header {
     "skills"
     "education"
     "work";
+}
+
+.resume-ats-section {
+    background-color: var(--secondary-color);
+    color: var(--secondary-accent-color);
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.resume-ats-section h2 {
+    padding-bottom: 20px;
+}
+
+.ats-resume-button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.resume-ats-section div:first-child {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+
+}
+
+.ats-resume-button-container a {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-bottom: 20px;
 }
 
 #expertise-summary, #resume-intro {
@@ -421,6 +479,12 @@ header {
     padding-bottom: 15px;
     position: relative;
     display: inline-block;
+    margin-bottom: 20px;
+}
+
+.resume-skill-title:last-child {
+    margin: 0;
+    padding: 0;
 }
 
 .resume-skill-title::after {
