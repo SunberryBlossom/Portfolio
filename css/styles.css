@@ -339,27 +339,70 @@ header {
     object-fit: cover;
     border-radius: 20px;
     padding-bottom: 20px;
+    grid-area: image;
 }
 
 .resume-section {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 1.2rem;
     color: var(--ink);
-    /* This will have to be updated to GRID */
+    display: grid;
+    grid-template-areas:
+    "image"
+    "intro"
+    "summary"
+    "skills"
+    "education"
+    "work";
 }
 
 #expertise-summary, #resume-intro {
     position: relative;
-    border: 1px solid green;
     display: flex;
     flex-direction: column;
     text-align: justify;
     padding: 10px;
     gap: 20px;
+}
+
+#expertise-summary {
+    grid-area: summary;
+}
+
+#resume-intro {
+    grid-area: intro;
+}
+
+#resume-skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    grid-area: skills;
+}
+
+#resume-skills h2 {
+    padding-bottom: 20px;
+}
+
+.resume-skill-title {
+    padding-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.resume-skill-title::after {
+    content: '';
+  position: absolute;
+  left: 0;
+  top: 32px;
+  height: 6px;
+  width: 100%;
+
+  background: linear-gradient(to right, var(--secondary-accent-color) var(--progress), var(--ink) var(--progress)
+  );
+
+  border-radius: 2px;
 }
 
 #resume-intro h2 {
