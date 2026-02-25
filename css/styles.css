@@ -29,7 +29,6 @@ html {
     font-family: 'EB Garamond', serif;
     scroll-behavior: smooth;
     background-color: var(--primary-color);
-    font-size: 1rem;
 }
 
 h1, h2, h3 {
@@ -351,7 +350,6 @@ footer {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -365,6 +363,7 @@ footer {
     height: 250px;
     width: 200px;
     border-radius: 10px;
+    border: 1px solid var(--ink);
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
@@ -386,7 +385,7 @@ footer {
     justify-content: center;
     position: relative;
     padding-bottom: 5px;
-    top: -59px;
+    top: -48px;
     width: 100%;
     border-radius: 0 0 10px 10px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -403,7 +402,8 @@ footer {
 
 .secondary-portfolio-section .cta-button,
 .ats-resume-button-container .cta-button,
-#contact-form .cta-button {
+#contact-form .cta-button,
+.modal-footer .cta-button {
     box-shadow: 3px 3px 3px black;
     background-color: var(--dark-green);
 }
@@ -428,6 +428,132 @@ footer {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     gap: 10px;
+}
+
+.modal {
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    border: 2px solid var(--secondary-accent-color);
+    background-color: var(--primary-color);
+    color: var(--ink);
+    padding: 0;
+    border-radius: 15px;
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    animation: slideDown 0.5s ease-out forwards;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: var(--ink);
+    color: var(--secondary-accent-color);
+    border: 1px solid var(--secondary-accent-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+    background: var(--dark-green);
+    color: var(--secondary-accent-color);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.modal.hide {
+    animation: slideUp 0.4s ease-in forwards;
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-container {
+    position: relative;
+    width: 100%;
+}
+
+.modal-hero {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--secondary-accent-color);
+}
+
+.modal-header {
+    padding: 1.5rem 2rem 0.5rem;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+}
+
+.modal-body {
+    padding: 1rem 2rem 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+.tech-stack span {
+    background-color: var(--secondary-color);
+    color: var(--secondary-accent-color);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-family: sans-serif;
+    border: 1px solid rgba(218, 178, 48, 0.3);
+}
+
+.modal-footer {
+    padding: 1.5rem 2rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-top: 1px solid var(--secondary-accent-color);
 }
 
 /* ==========================================================================
@@ -537,7 +663,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    color: var(--ink);
     grid-area: education;
 }
 
@@ -545,7 +670,6 @@ footer {
     text-align: justify;
     padding: 20px;
     font-size: 1.3rem;
-    color: var(--ink);
 }
 
 .education-container h3 {
@@ -703,7 +827,6 @@ textarea {
     color: var(--primary-color);
     font-family: inherit;
     font-size: 1rem;
-    box-sizing: border-box;
 }
 
 select {
@@ -809,8 +932,6 @@ select:user-invalid {
 
 @media screen and (min-width: 1024px) {
     .secondary-portfolio-section img {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
     }
 
@@ -839,9 +960,8 @@ select:user-invalid {
 
     .secondary-portfolio-section .cta-button:hover,
     .ats-resume-button-container .cta-button:hover,
-    #contact-form .cta-button:hover  {
-        color: var(--secondary-accent-color);
-        transform: translateY(-10px);
+    #contact-form .cta-button:hover,
+    .modal-footer .cta-button:hover {
         box-shadow: 6px 6px 6px black;
     }
 
@@ -852,8 +972,8 @@ select:user-invalid {
 
     .secondary-portfolio-section .cta-button:active,
     .ats-resume-button-container .cta-button:active,
-    #contact-form .cta-button:active  {
-        transform: translateY(1px);
+    #contact-form .cta-button:active,
+    .modal-footer .cta-button:active {
         box-shadow: 0 0 6px black;
     }
 

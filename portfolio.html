@@ -40,27 +40,27 @@
                     <p>Click a card for more info.</p>
                 </div>
                 <div class="portfolio-card-container">
-                    <div class="portfolio-card">
+                    <button class="portfolio-card" data-project="munilytics">
                         <img alt="8-bit picture of a cube" src="assets/munilytics-card.png">
                         <div class="portfolio-card-content">
                                 <h2>Munilytics</h2>
                                 <p>KOLADA-API based ROLAP</p>
                             </div>
-                    </div>
-                    <div class="portfolio-card">
+                    </button>
+                    <button class="portfolio-card" data-project="the-seer">
                         <img alt="8-bit picture of a hooded person" src="assets/the-seer-card.png">
                         <div class="portfolio-card-content">
                                 <h2>The Seer</h2>
                                 <p>Console based fortune telling</p>
                             </div>
-                    </div>
-                    <div class="portfolio-card">
+                    </button>
+                    <button class="portfolio-card" data-project="slava-bank">
                         <img alt="8-bit picture of a golden coin" src="assets/slava-bank-card.png">
                         <div class="portfolio-card-content">
                             <h2>Slava Bank</h2>
                             <p>Console based bank application</p>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </section>
             <section class="secondary-portfolio-section">
@@ -75,5 +75,21 @@
         <footer>
             <p>&COPY; 2026 Elvira Rebecca Mariesdotter. All rights reserved.</p>
         </footer>
+        <dialog id="project-modal" class="modal">
+    <div class="modal-container">
+        <button id="close-modal-btn" class="close-modal">&times;</button>
+        <img id="modal-img" src="" alt="" class="modal-hero">
+        <div class="modal-header">
+            <h2 id="modal-title"></h2>
+        </div>
+        <div class="modal-body">
+            <p id="modal-description"></p>
+            <div id="modal-tags" class="tech-stack"></div>
+        </div>
+        <div class="modal-footer">
+            <a id="modal-link" href="#" target="_blank" class="cta-button small">GitHub Repo</a>
+        </div>
+    </div>
+</dialog>
 </body>
 </html>
