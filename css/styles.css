@@ -1,3 +1,7 @@
+/* ==========================================================================
+   GLOBAL STYLES - All Pages
+   ========================================================================== */
+
 :root {
     --primary-color: #E5E0DA;
     --secondary-color: #3d2200;
@@ -8,7 +12,9 @@
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -30,6 +36,21 @@ h1, h2, h3 {
     font-family: 'Cinzel Decorative', serif;
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--ink);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    z-index: 100;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 header {
     position: sticky;
     z-index: 10;
@@ -41,10 +62,11 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding-bottom: 10px;
 }
 
 .logo {
-    width: 15%
+    width: 15%;
 }
 
 .logo img {
@@ -66,15 +88,20 @@ header {
     gap: 5px;
 }
 
+.navbar a {
+    position: relative;
+    transition: all 1s ease;
+}
+
 .navbar a::before {
-   content: "";
-   position: absolute;
-   bottom: -3px;
-   left: 0;
-   width: 0;
-   height: 2px;
-   background-color: var(--ink);
-   transition: all .3s ease;
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--ink);
+    transition: all .3s ease;
 }
 
 .navbar a:hover::before {
@@ -82,12 +109,17 @@ header {
     background-color: var(--primary-accent-color);
 }
 
-.navbar a {
-    transition: all 1s ease;
-    position: relative;
+.navbar a.active-page {
+    color: var(--secondary-accent-color);
 }
 
-.navbar::before, footer::before {
+.navbar a.active-page::before {
+    width: 100%;
+    background-color: var(--secondary-accent-color);
+}
+
+.navbar::before,
+footer::before {
     content: "";
     border-top: 1px solid var(--primary-accent-color);
     display: block;
@@ -97,6 +129,40 @@ header {
     top: -7px;
 }
 
+footer {
+    padding: 20px 0 10px;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    width: auto;
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: var(--ink);
+    color: var(--primary-color);
+    border: 1px solid var(--secondary-accent-color);
+    border-radius: 10px;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: bolder;
+    box-shadow: 3px 3px 3px grey;
+}
+
+.subtitle {
+    opacity: 0.7;
+}
+
+.section-header {
+    display: block;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+/* ==========================================================================
+   HOME PAGE STYLES
+   ========================================================================== */
+
 .hero-section {
     height: auto;
     display: flex;
@@ -104,8 +170,7 @@ header {
     gap: 40px;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
-    padding-top: 100px;
+    padding: 100px 0 20px;
 }
 
 .hero-image-section {
@@ -153,35 +218,6 @@ header {
     font-size: 1.1rem;
 }
 
-.cta-button {
-    display: inline-block;
-    width: auto;
-    padding: 10px 30px;
-    font-size: 1rem;
-    border: none;
-    background-color: var(--ink);
-    color: var(--primary-color);
-    border: 1px solid var(--secondary-accent-color);
-    border-radius: 10px;
-    font-family: 'Cinzel Decorative', serif;
-    font-weight: bolder;
-    box-shadow: 3px 3px 3px grey;
-}
-
-.secondary-portfolio-section .cta-button, .ats-resume-button-container .cta-button {
-        box-shadow: 3px 3px 3px black;
-        background-color: var(--dark-green);
-    }
-
-.navbar a.active-page::before {
-    width: 100%;
-    background-color: var(--secondary-accent-color);
-}
-
-.navbar a.active-page {
-    color: var(--secondary-accent-color);
-}
-
 .skill-section {
     background-color: var(--secondary-color);
     color: var(--secondary-accent-color);
@@ -196,14 +232,19 @@ header {
     font-size: 1.3rem;
 }
 
-.skill-card-container {
-    padding: 10px;
+.skill-card-container,
+.contact-card-container,
+.portfolio-card-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: center;
     justify-content: center;
+}
+
+.skill-card-container {
+    padding: 10px;
+    align-items: center;
 }
 
 .skill-card {
@@ -232,14 +273,6 @@ header {
     color: var(--ink);
 }
 
-.contact-card-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
 .contact-card-container h3 {
     display: inline-block;
 }
@@ -248,6 +281,10 @@ header {
     width: 170px;
     padding: 10px;
 }
+
+/* ==========================================================================
+   ABOUT PAGE STYLES
+   ========================================================================== */
 
 .story-info-section {
     display: flex;
@@ -266,25 +303,21 @@ header {
 }
 
 .journey-info-section {
-        color: var(--ink);
+    color: var(--ink);
 }
 
 #experience-title {
-    padding-bottom: 1rem;
+    padding: 0 0 1rem 3rem;
     font-size: 2rem;
-    padding-left: 3rem;
 }
 
 .experience-article {
     font-size: 1.2rem;
-    padding: 0 3rem;
+    padding: 0 3rem 2rem;
     display: grid;
-    grid-template-areas:
-        "graph text";
+    grid-template-areas: "graph text";
     grid-template-columns: 1fr 8fr;
-    column-gap: 1rem;
-    row-gap: 1rem;
-    padding-bottom: 2rem;
+    gap: 1rem;
 }
 
 .experience-graph {
@@ -306,6 +339,10 @@ header {
     grid-area: text;
 }
 
+/* ==========================================================================
+   PORTFOLIO PAGE STYLES
+   ========================================================================== */
+
 .primary-portfolio-section {
     color: var(--ink);
     font-size: 1.2rem;
@@ -320,10 +357,6 @@ header {
 .portfolio-card-container {
     font-size: 1rem;
     padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
 }
 
 .portfolio-card {
@@ -345,63 +378,64 @@ header {
     border-radius: 10px;
 }
 
-.resume-section img {
-    width: 100%;
-    border-radius: 20px;
-    padding-bottom: 20px;
-    grid-area: image;
-}
-
-.resume-contact-section {
-    padding: 20px;
+.portfolio-card-content {
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-}
-
-.resume-contact-section h2 {
-    font-size: 1.2rem;
-    color: var(--ink);
-}
-
-.resume-cta-buttons-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.resume-cta-buttons-container a {
-    width: 180px;
-}
-
-#resume-education {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: var(--ink);
-    grid-area: education;
-}
-
-.education-container {
-    text-align: justify;
-    padding: 20px;
-    font-size: 1.3rem;
-    color: var(--ink);
-}
-
-.education-container h3 {
-    font-size: 1.25rem;
-}
-
-.section-header {
-    display: block;
-    border-bottom: 1px solid var(--ink);
-    margin-bottom: 20px;
+    position: relative;
     padding-bottom: 5px;
+    top: -59px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top: 1px solid var(--ink);
+}
+
+.secondary-portfolio-section {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    color: var(--secondary-accent-color);
+}
+
+.secondary-portfolio-section .cta-button,
+.ats-resume-button-container .cta-button,
+#contact-form .cta-button {
+    box-shadow: 3px 3px 3px black;
+    background-color: var(--dark-green);
+}
+
+.secondary-portfolio-section img {
+    height: 100%;
+    width: 100%;
+    filter: blur(2px);
+}
+
+.secondary-text-container {
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    gap: 10px;
+}
+
+/* ==========================================================================
+   RESUME PAGE STYLES
+   ========================================================================== */
+
+#resume-title {
+    text-align: center;
+    color: var(--ink);
 }
 
 .resume-section {
@@ -411,49 +445,23 @@ header {
     justify-items: center;
     display: grid;
     grid-template-areas:
-    "image"
-    "intro"
-    "summary"
-    "skills"
-    "education"
-    "work";
+        "image"
+        "intro"
+        "summary"
+        "skills"
+        "education"
+        "work";
 }
 
-.resume-ats-section {
-    background-color: var(--secondary-color);
-    color: var(--secondary-accent-color);
-    padding: 20px 10px;
-    text-align: center;
-}
-
-.resume-ats-section h2 {
-    padding-bottom: 20px;
-}
-
-.ats-resume-button-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.resume-ats-section div:first-child {
-    background: rgba(0, 0, 0, 0.6);
+.resume-section img {
     width: 100%;
-    max-width: 500px;
-    padding: 5px;
-    border-radius: 10px;
-    margin: 0 auto;
-
+    border-radius: 20px;
+    padding-bottom: 20px;
+    grid-area: image;
 }
 
-.ats-resume-button-container a {
-    font-size: 1rem;
-    padding: 10px 15px;
-    margin-bottom: 20px;
-}
-
-#expertise-summary, #resume-intro {
+#resume-intro {
+    grid-area: intro;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -462,17 +470,26 @@ header {
     gap: 20px;
 }
 
-#expertise-summary {
-    grid-area: summary;
-    padding-bottom: 40px;
-}
-
-#resume-intro {
-    grid-area: intro;
-}
-
 #resume-intro h2 {
     font-size: 1.5rem;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#resume-intro .subtitle {
+    position: absolute;
+    top: 37px;
+}
+
+#expertise-summary {
+    grid-area: summary;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    gap: 20px;
+    padding-bottom: 40px;
 }
 
 #resume-skills {
@@ -502,85 +519,239 @@ header {
 
 .resume-skill-title::after {
     content: '';
-  position: absolute;
-  left: 0;
-  top: 32px;
-  height: 6px;
-  width: 100%;
-
-  background: linear-gradient(to right, var(--secondary-accent-color) var(--progress), var(--ink) var(--progress)
-  );
-
-  border-radius: 2px;
-}
-
-#resume-intro h2 {
-    text-align: left;
-    padding-bottom: 10px;
-}
-
-#resume-intro .subtitle {
     position: absolute;
-     top: 37px;
+    left: 0;
+    top: 32px;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        var(--secondary-accent-color) var(--progress),
+        var(--ink) var(--progress)
+    );
+    border-radius: 2px;
 }
 
-.subtitle {
-    opacity: 0.7;
-}
-
-.portfolio-card-content {
-    color: var(--primary-color);
+#resume-education {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: relative;
-    padding-bottom: 5px;
-    top: -59px;
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-top: 1px solid var(--ink);
-}
-
-.secondary-portfolio-section {
-    position: relative;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    color: var(--secondary-accent-color);
-}
-
-.secondary-portfolio-section img {
-    height: 100%;
-    width: 100%;
-    filter: blur(2px);
-}
-
-.secondary-text-container {
-    text-align: center;
-    font-size: 1rem;
-    position: absolute;
-    top: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    gap: 10px;
-}
-
-footer {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-#resume-title {
-    text-align: center;
+    gap: 20px;
     color: var(--ink);
+    grid-area: education;
+}
+
+.education-container {
+    text-align: justify;
+    padding: 20px;
+    font-size: 1.3rem;
+    color: var(--ink);
+}
+
+.education-container h3 {
+    font-size: 1.25rem;
+}
+
+.resume-ats-section {
+    background-color: var(--secondary-color);
+    color: var(--secondary-accent-color);
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.resume-ats-section h2 {
+    padding-bottom: 20px;
+}
+
+.resume-ats-section div:first-child {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.resume-cta-buttons-container,
+.ats-resume-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.resume-cta-buttons-container {
+    align-items: center;
+    margin-top: 20px;
+}
+
+.resume-cta-buttons-container a {
+    width: 180px;
+}
+
+.ats-resume-button-container a {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.resume-contact-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.resume-contact-section h2 {
+    font-size: 1.2rem;
+    color: var(--ink);
+}
+
+/* ==========================================================================
+   CONTACT PAGE STYLES
+   ========================================================================== */
+
+#contact-title {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#contact-main-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/contact-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 85vh;
+    padding: 20px;
+    color: var(--secondary-accent-color);
+    border-top: 2px solid var(--secondary-accent-color);
+    border-bottom: 2px solid var(--secondary-accent-color);
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#contact-form .cta-button {
+    max-width: 200px;
+    align-self: center;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--secondary-accent-color);
+    padding: 2.5rem;
+    border-radius: 15px;
+    color: var(--primary-color);
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+fieldset {
+    border: 1px solid rgba(229, 224, 218, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+legend {
+    color: var(--secondary-accent-color);
+    padding: 0 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(229, 224, 218, 0.3);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--primary-color);
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+select {
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+select option {
+    background-color: var(--ink);
+    color: var(--primary-color);
+    padding: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-accent-color);
+    box-shadow: 0 0 5px rgba(218, 178, 48, 0.3);
+}
+
+.required-field::after {
+    content: " *";
+    color: var(--secondary-accent-color);
+    font-weight: bold;
+}
+
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+    border-color: #ff4d00 !important;
+    box-shadow: 0 0 15px rgba(255, 77, 0, 0.6);
+}
+
+::placeholder {
+    color: rgba(229, 224, 218, 0.5);
+    font-size: 0.95rem;
+    opacity: 0.6;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+@media screen and (min-width: 425px) {
+    .secondary-text-container {
+        top: 30%;
+        padding: 20px;
+    }
 }
 
 @media screen and (min-width: 728px) {
@@ -590,8 +761,8 @@ footer {
     }
 
     .story-info-section {
-    font-size: 1.7rem;
-}
+        font-size: 1.7rem;
+    }
 
     .secondary-text-container {
         gap: 20px;
@@ -603,50 +774,39 @@ footer {
     }
 
     .resume-section {
-    position: relative;
-    grid-template-areas:
-    "image intro"
-    "summary summary"
-    "skills skills"
-    "education education";
-    grid-template-columns: 1fr 2fr;
-    column-gap: 40px;
-    align-items: start;
-}
-
-.resume-section img {
-    align-self: center;
-}
-
-#resume-intro h2 {
-    font-size: 1.2rem;
-}
-
-#resume-intro {
-    height: 100%;
-    align-self: start;
+        position: relative;
+        grid-template-areas:
+            "image intro"
+            "summary summary"
+            "skills skills"
+            "education education";
+        grid-template-columns: 1fr 2fr;
+        column-gap: 40px;
+        align-items: start;
     }
 
     .resume-section img {
+        align-self: center;
         margin-bottom: 0;
     }
 
-    #resume-title {
-    text-align: left;
-    padding-left: 25px;
-    padding-top: 40px;
-}
-}
+    #resume-intro h2 {
+        font-size: 1.2rem;
+    }
 
-@media screen and (min-width: 425px) {
-    .secondary-text-container {
-        top: 30%;
-        padding: 20px;
+    #resume-intro {
+        height: 100%;
+        align-self: start;
+    }
+
+    #resume-title {
+        text-align: left;
+        padding-left: 25px;
+        padding-top: 40px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-
     .secondary-portfolio-section img {
         width: 100%;
         height: 100%;
@@ -660,10 +820,13 @@ footer {
     }
 
     .hero-section:hover span {
-        color: var(--secondary-accent-color)
+        color: var(--secondary-accent-color);
     }
 
-    .cta-button, .skill-card, span, .portfolio-card {
+    .cta-button,
+    .skill-card,
+    span,
+    .portfolio-card {
         transition: all 0.4s ease;
     }
 
@@ -673,32 +836,35 @@ footer {
         box-shadow: 6px 6px 6px grey;
     }
 
-    .secondary-portfolio-section .cta-button:hover, .ats-resume-button-container .cta-button:hover{
+    .secondary-portfolio-section .cta-button:hover,
+    .ats-resume-button-container .cta-button:hover,
+    #contact-form .cta-button:hover  {
         color: var(--secondary-accent-color);
         transform: translateY(-10px);
         box-shadow: 6px 6px 6px black;
     }
 
-    .secondary-portfolio-section .cta-button:active {
-        transform: translateY(1px);
-        box-shadow: 0px 0px 6px black;
-    }
-
     .cta-button:active {
         transform: translateY(1px);
-        box-shadow: 0px 0px 6px grey;
+        box-shadow: 0 0 6px grey;
+    }
+
+    .secondary-portfolio-section .cta-button:active,
+    .ats-resume-button-container .cta-button:active,
+    #contact-form .cta-button:active  {
+        transform: translateY(1px);
+        box-shadow: 0 0 6px black;
     }
 
     .hero-section {
         display: grid;
         grid-template-areas:
-        'text image'
-        'button image';
+            'text image'
+            'button image';
         justify-items: center;
         align-items: center;
         height: 85vh;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding: 0 40px;
     }
 
     .hero-image-container {
@@ -723,7 +889,6 @@ footer {
         width: 100%;
     }
 
-
     a:hover {
         color: var(--primary-accent-color);
     }
@@ -733,7 +898,7 @@ footer {
     }
 
     .hero-content-section h1 {
-    font-size: 3rem;
+        font-size: 3rem;
     }
 
     .hero-content-section p {
@@ -764,20 +929,20 @@ footer {
         font-size: 2em;
     }
 
-    .skill-card:hover{
+    .skill-card:hover,
+    .portfolio-card:hover {
         transform: translateY(-10px);
     }
 
     .portfolio-card:hover {
-        transform: translateY(-10px);
         box-shadow: 6px 6px 6px var(--ink);
         cursor: pointer;
     }
 
     .story-info-section {
-    flex-direction: row;
-    padding: 10px;
-    align-items: center;
+        flex-direction: row;
+        padding: 10px;
+        align-items: center;
     }
 
     .story-image-container img {
@@ -786,37 +951,37 @@ footer {
     }
 
     .story-content-container {
-       padding: 50px;
+        padding: 50px;
     }
 
     .resume-section {
-    position: relative;
-    grid-template-areas:
-    "image summary"
-    "intro summary"
-    "intro skills"
-    "education education";
-    grid-template-columns: 1fr 2fr;
-    column-gap: 40px;
-    align-items: start;
+        position: relative;
+        grid-template-areas:
+            "image summary"
+            "intro summary"
+            "intro skills"
+            "education education";
+        grid-template-columns: 1fr 2fr;
+        column-gap: 40px;
+        align-items: start;
+    }
 }
-}
-
 
 @media print {
-    header, 
-    .navbar, 
-    footer, 
-    .cta-button, 
+    header,
+    .navbar,
+    footer,
+    .cta-button,
     .resume-ats-section,
     .social-media-section,
-    .resume-contact-section, 
+    .resume-contact-section,
     img,
     #resume-skills {
         display: none !important;
     }
 
-    body, html {
+    body,
+    html {
         background-color: white !important;
         color: black !important;
         font-size: 11pt;
@@ -834,7 +999,9 @@ footer {
         padding: 0;
     }
 
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
         page-break-after: avoid;
         break-after: avoid;
     }

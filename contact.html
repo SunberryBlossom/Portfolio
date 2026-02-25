@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Vira Mariesdotter</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="https://kit.fontawesome.com/638957e651.js" crossorigin="anonymous"></script>
+        <script src="js/script.js" defer></script>
+    </head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+            <div class="logo">
+                <img src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
+                <p>E.R. Mariesdotter</p>
+            </div>
+            <nav class="navbar" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-me.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html" class="active-page">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-content">
+            <section id="contact-main-section" aria-labelledby="contact-title">
+            <h1 id="contact-title">Get in touch</h1>
+            <div class="form-container">
+                <h2>Fill out the form to contact me directly</h2>
+                <form id="contact-form" method="POST">
+                    <fieldset>
+                        <legend>Contact information</legend>
+                        <div class="form-group">
+                            <label class="required-field" for="user_name">Name</label>
+                            <input type="text" id="user_name" name="from_name" placeholder="B. Baggins" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="required-field" for="user_email">email</label>
+                            <input type="email" id="user_email" name="reply_to" placeholder="MrUnderhill@shire.org" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user_company">Company</label>
+                            <input type="text" id="user_company" name="company" placeholder="Hobbiton Consulting Inc.">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Reason for contact</legend>
+                        <div class="form-group">
+                            <label class="required-field" for="reason">Why do you wish to contact me today?</label>
+                            <select id="reason" name="reason">
+                                <option value="job-offer">I am hiring!</option>
+                                <option value="freelance-offer">Freelance offer</option>
+                                <option value="networking">Networking</option>
+                                <option value="Collab">Collaboration</option>
+                                <option value="Misc">Something else</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="required-field" for="message">Your message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Hello Vira, we would like to interview you!" required></textarea>
+                        </div>
+                    </fieldset>
+                    <button class="cta-button" type="submit" id="submit-btn" aria-label="Submit contact form">Submit</button>
+                </form>
+            </div>
+            </section>
+        </main>
+        <footer>
+            <p>&COPY; 2026 Elvira Rebecca Mariesdotter. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

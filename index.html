@@ -16,12 +16,13 @@
         <script src="js/script.js" defer></script>
     </head>
     <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
             <div class="logo">
-                <img src="assets/coin_icon.png">
+                <img src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
                 <p>E.R. Mariesdotter</p>
             </div>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html" class="active-page">Home</a></li>
                     <li><a href="about-me.html">About</a></li>
@@ -31,84 +32,84 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <section class="hero-section">
+        <main id="main-content">
+            <section class="hero-section" aria-labelledby="hero-heading">
                 <div class="hero-image-section">
                     <div class="hero-image-container">
-                        <img id="hero-image" src="assets/hero-image.png">
+                        <img id="hero-image" src="assets/hero-image.png" alt="Portrait of Vira Mariesdotter">
                     </div>
                 </div>
                 <div class="hero-content-section">
-                    <h1>Mae govannen! Call me <span>Vira</span></h1>
+                    <h1 id="hero-heading">Mae govannen! Call me <span>Vira</span></h1>
                     <p>A .NET fullstack system developer based in Stockholm Sweden, with an obsession for data-intensive applications.</p>
                     <a class="cta-button" id="hero-button" href="contact.html">Let's work together</a>
                 </div>
             </section>
-            <section class="skill-section">
-                <h2>My current skill set</h2>
+            <section class="skill-section" aria-labelledby="skills-heading">
+                <h2 id="skills-heading">My current skill set</h2>
                 <div class="skill-card-container">
                     <div class="skill-card">
                         <h3>Html 5</h3>
-                        <i class="fa-brands fa-html5" style="color: rgb(221, 75, 37);"></i>
+                        <i class="fa-brands fa-html5" style="color: rgb(221, 75, 37);" aria-hidden="true"></i>
                     </div>
                     <div class="skill-card">
                         <h3>Css 3</h3>
-                        <i class="fa-brands fa-css3" style="color: rgb(53, 149, 207);"></i>
+                        <i class="fa-brands fa-css3" style="color: rgb(53, 149, 207);" aria-hidden="true"></i>
                     </div>
                     <div class="skill-card">
                         <h3>JS</h3>
-                        <i class="fa-brands fa-square-js" style="color: rgb(239, 216, 29);"></i>
+                        <i class="fa-brands fa-square-js" style="color: rgb(239, 216, 29);" aria-hidden="true"></i>
                     </div>
                     <div class="skill-card">
                         <h3>React</h3>
-                        <i class="fa-brands fa-react" style="color: rgb(94, 211, 243);"></i>
+                        <i class="fa-brands fa-react" style="color: rgb(94, 211, 243);" aria-hidden="true"></i>
                     </div>
                     <div class="skill-card">
                         <h3>C# | .Net</h3>
-                        <i class="fa-solid fa-code" style="color: rgb(167, 108, 225);"></i>
+                        <i class="fa-solid fa-code" style="color: rgb(167, 108, 225);" aria-hidden="true"></i>
                     </div>
                     <div class="skill-card">
                         <h3>T-sql | Postgres</h3>
-                        <i class="fa-solid fa-database" style="color: rgb(49, 100, 140);"></i>
+                        <i class="fa-solid fa-database" style="color: rgb(49, 100, 140);" aria-hidden="true"></i>
                     </div>
                     <div class="skill-card">
                         <h3>Docker</h3>
-                        <i class="fa-brands fa-docker" style="color: rgb(19, 83, 210);"></i>
+                        <i class="fa-brands fa-docker" style="color: rgb(19, 83, 210);" aria-hidden="true"></i>
                     </div>
                     <div class="skill-card">
                         <h3>Git</h3>
-                        <i class="fa-brands fa-git-alt" style="color: rgb(232, 77, 49);"></i>
+                        <i class="fa-brands fa-git-alt" style="color: rgb(232, 77, 49);" aria-hidden="true"></i>
                     </div>
                     <div class="skill-card">
                         <h3>Rest | Soap</h3>
-                        <i class="fa-solid fa-server" style="color: rgb(95, 94, 94);"></i>
+                        <i class="fa-solid fa-server" style="color: rgb(95, 94, 94);" aria-hidden="true"></i>
                     </div>
                 </div>
             </section>
-            <section class="social-media-section">
-                <h2>Get in touch with me!</h2>
+            <section class="social-media-section" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Get in touch with me!</h2>
                 <div class="contact-card-container">
-                    <a target="_blank" href="mailto:wooden_anemone@pm.me">
+                    <a target="_blank" href="mailto:wooden_anemone@pm.me" aria-label="Send email to Vira">
                         <div class="contact-card cta-button">
-                            <i class="fa-solid fa-at"></i>
+                            <i class="fa-solid fa-at" aria-hidden="true"></i>
                             <h3>Mail</h3>
                         </div>
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/elviramariesdotter/">
+                    <a target="_blank" href="https://www.linkedin.com/in/elviramariesdotter/" aria-label="Connect with Vira on LinkedIn">
                         <div class="contact-card cta-button">
-                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                             <h3>LinkedIn</h3>
                         </div>
                     </a>
-                    <a target="_blank" href="tel:+46709421135">
+                    <a target="_blank" href="tel:+46709421135" aria-label="Call Vira">
                         <div class="contact-card cta-button">
-                            <i class="fa-solid fa-phone"></i>
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
                             <h3>Phone</h3>
                         </div>
                     </a>
-                    <a target="_blank" href="https://github.com/SunberryBlossom">
+                    <a target="_blank" href="https://github.com/SunberryBlossom" aria-label="View Vira's GitHub profile">
                         <div class="contact-card cta-button">
-                            <i class="fa-brands fa-github"></i>
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
                             <h3>GitHub</h3>
                         </div>
                     </a>

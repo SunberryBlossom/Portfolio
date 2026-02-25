@@ -3,7 +3,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About | Vira Mariesdotter</title>
+        <title>Portfolio | Vira Mariesdotter</title>
 
         <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -16,12 +16,13 @@
         <script src="js/script.js" defer></script>
     </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
             <div class="logo">
-                <img src="assets/coin_icon.png">
+                <img src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
                 <p>E.R. Mariesdotter</p>
             </div>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about-me.html">About</a></li>
@@ -31,10 +32,10 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <section class="primary-portfolio-section">
+        <main id="main-content">
+            <section class="primary-portfolio-section" aria-labelledby="portfolio-heading">
                 <div class="primary-text-container">
-                    <h1>Featured projects</h1>
+                    <h1 id="portfolio-heading">Featured projects</h1>
                     <p>Take part of some of my latest inventions.</p>
                     <p>Click a card for more info.</p>
                 </div>
@@ -67,7 +68,7 @@
                 <div class="secondary-text-container">
                     <h2>Want to see more?</h2>
                     <p>Check out all of my open projects and more</p>
-                    <a class="cta-button" target="_blank" href="https://github.com/SunberryBlossom"><i class="fa-brands fa-github"></i> here</a>
+                    <a class="cta-button" target="_blank" href="https://github.com/SunberryBlossom" aria-label="View all projects on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> on GitHub</a>
                 </div>
             </section>
         </main>
