@@ -170,7 +170,8 @@ footer {
     gap: 40px;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0 20px;
+    padding: 100px 0 10px;
+    margin-top: 15px;
 }
 
 .hero-image-section {
@@ -864,7 +865,7 @@ select:user-invalid {
         justify-items: center;
         align-items: center;
         height: 85vh;
-        padding: 0 40px;
+        padding: 25px 40px;
     }
 
     .hero-image-container {
