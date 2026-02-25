@@ -16,12 +16,13 @@
         <script src="js/script.js" defer></script>
     </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
             <div class="logo">
-                <img src="assets/coin_icon.png">
+                <img src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
                 <p>E.R. Mariesdotter</p>
             </div>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about-me.html">About</a></li>
@@ -31,9 +32,9 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main id="main-content">
             <h1 id="resume-title">Resume</h1>
-            <section class="resume-section">
+            <section class="resume-section" aria-labelledby="resume-title">
                 <img src="assets/resume-image.jpeg" id="resume-picture" alt="Portrait of E.R. Mariesdotter, System Developer">
                 <div id="resume-intro">
                     <h2>E.R. Mariesdotter</h2>
@@ -136,17 +137,17 @@
                 <div>
                     <h2>Complete resumes</h2>
                     <div class="ats-resume-button-container">
-                        <a class="cta-button" target="_blank" href="assets/cv-elvira-mariesdotter-eng.pdf"><i class="fa-solid fa-briefcase"></i> EN version</a>
-                        <a class="cta-button" target="_blank" href="assets/cv-elvira-mariesdotter-swe.pdf"><i class="fa-solid fa-briefcase"></i> SW version</a>
+                        <a class="cta-button" target="_blank" href="assets/cv-elvira-mariesdotter-eng.pdf" aria-label="Download resume in English (PDF)"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> EN version</a>
+                        <a class="cta-button" target="_blank" href="assets/cv-elvira-mariesdotter-swe.pdf" aria-label="Download resume in Swedish (PDF)"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> SW version</a>
                     </div>
                 </div>
             </section>
-            <section class="resume-contact-section">
-                <h2>Want to start something great?</h2>
+            <section class="resume-contact-section" aria-labelledby="resume-contact-heading">
+                <h2 id="resume-contact-heading">Want to start something great?</h2>
                 <div class="resume-cta-buttons-container">
-                    <a target="_blank" href="tel:+46709421135" class="cta-button"><i class="fa-solid fa-phone"></i> Phone me!</a>
-                    <a target="_blank" href="mailto:wooden_anemone@pm.me" class="cta-button"><i class="fa-solid fa-at"></i> Email me!</a>
-                    <a target="_blank" href="https://www.linkedin.com/in/elviramariesdotter/" class="cta-button"><i class="fa-solid fa-comment"></i> DM me!</a>
+                    <a target="_blank" href="tel:+46709421135" class="cta-button" aria-label="Call Vira"><i class="fa-solid fa-phone" aria-hidden="true"></i> Phone me!</a>
+                    <a target="_blank" href="mailto:wooden_anemone@pm.me" class="cta-button" aria-label="Send email to Vira"><i class="fa-solid fa-at" aria-hidden="true"></i> Email me!</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/elviramariesdotter/" class="cta-button" aria-label="Message Vira on LinkedIn"><i class="fa-solid fa-comment" aria-hidden="true"></i> DM me!</a>
                 </div>
             </section>
         </main>
