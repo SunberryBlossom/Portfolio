@@ -26,11 +26,11 @@ const modal = document.getElementById('project-modal');
 
 if (modal) {
     const closeBtn = document.getElementById('close-modal-btn');
-    const projectButtons = document.querySelectorAll('.portfolio-card');
+    const projectCards = document.querySelectorAll('.portfolio-card');
 
-    projectButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const projectId = button.getAttribute('data-project');
+    projectCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const projectId = card.getAttribute('data-project');
             const data = projectData[projectId];
 
             if (data) {
@@ -39,11 +39,11 @@ if (modal) {
                 document.getElementById('modal-title').textContent = data.title;
                 document.getElementById('modal-description').textContent = data.description;
                 document.getElementById('modal-img').src = data.image;
-                document.getElementById('modal-img').alt = `Bild för ${data.title}`;
+                document.getElementById('modal-img').alt = `Image logo for ${data.title}`;
                 document.getElementById('modal-link').href = data.link;
 
                 const tagsContainer = document.getElementById('modal-tags');
-                tagsContainer.innerHTML = '';
+                tagsContainer.replaceChildren();
                 data.tags.forEach(tag => {
                     const span = document.createElement('span');
                     span.textContent = tag;
@@ -86,27 +86,21 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const originalBtnText = submitBtn.innerText;
-        submitBtn.innerText = 'Sending...';
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
         emailjs.sendForm('service_8hf6kz5', 'template_8l0uniy', this)
             .then(function() {
-                console.log('SUCCESS!');
+                const successBox = document.getElementById('form-success-message-container');
 
-                const container = document.querySelector('.form-container');
-                container.innerHTML = `
-                    <div style="text-align: center; padding: 2rem; display: flex; flex-direction: column; gap: 15px; align-items: center;">
-                        <i style="font-size: 3rem; color: var(--secondary-accent-color);">✓</i>
-                        <h2 style="color: var(--secondary-accent-color); font-size: 2rem;">Message Sent!</h2>
-                        <p style="color: var(--primary-color); font-size: 1.1rem;">Thank you for reaching out. I'll get back to you as soon as possible.</p>
-                    </div>
-                `;
+                successBox.classList.remove("hidden");
+                contactForm.classList.add("hidden");
             }, function(error) {
                 console.log('FAILED...', error);
                 alert('Oops! Something went wrong. Please try again later.');
 
-                submitBtn.innerText = originalBtnText;
+                submitBtn.textContent = originalBtnText;
                 submitBtn.disabled = false;
             });
     });
