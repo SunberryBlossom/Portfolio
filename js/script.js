@@ -1,3 +1,11 @@
+const easterEggButton = document.querySelector('.logo img');
+
+easterEggButton.addEventListener('click', () => {
+    const root = document.documentElement;
+    root.classList.toggle('ithildin-mode');
+    localStorage.setItem('ithildin-mode', root.classList.contains('ithildin-mode'));
+});
+
 const projectData = {
     "munilytics": {
         title: "Munilytics",

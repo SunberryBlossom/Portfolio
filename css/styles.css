@@ -8,8 +8,17 @@
     --primary-accent-color: #666748;
     --secondary-accent-color: #dab230;
     --ink: #402f21;
-    --dark-green: #023205;
+    --tertiary-color: #023205;
     box-sizing: border-box;
+}
+
+.ithildin-mode {
+    --primary-color: #0D0F12;
+    --secondary-color: #00163e;
+    --primary-accent-color: #2D3E4E;
+    --secondary-accent-color: #92fffd;
+    --ink: #E5E0DA;
+    --tertiary-color: #020a3d;
 }
 
 *,
@@ -18,15 +27,20 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hidden {
     display: none !important;
 }
 
+p {
+    color: var(--ink);
+}
+
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--ink);
 }
 
 html {
@@ -74,6 +88,21 @@ header {
 
 .logo img {
     width: 100%;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: all 0.8s ease-in-out;
+    box-shadow: 0 0 60px var(--secondary-accent-color);
+}
+
+
+.ithildin-mode .logo img {
+    box-shadow: -5px 5px 6px var(--secondary-accent-color);
+    filter: brightness(1.2) contrast(1.1);
+    border: none;
+}
+
+.logo img:hover {
+    cursor: pointer;
 }
 
 .logo p {
@@ -93,7 +122,7 @@ header {
 
 .navbar a {
     position: relative;
-    transition: all 1s ease;
+    transition: all .3s ease;
 }
 
 .navbar a::before {
@@ -109,7 +138,7 @@ header {
 
 .navbar a:hover::before {
     width: 100%;
-    background-color: var(--primary-accent-color);
+    background-color: var(--secondary-accent-color);
 }
 
 .navbar a.active-page {
@@ -142,13 +171,13 @@ footer {
     width: auto;
     padding: 10px 30px;
     font-size: 1rem;
-    background-color: var(--ink);
-    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: whitesmoke;
     border: 1px solid var(--secondary-accent-color);
     border-radius: 10px;
     font-family: 'Cinzel Decorative', serif;
     font-weight: bolder;
-    box-shadow: 3px 3px 3px grey;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 .subtitle {
@@ -362,6 +391,10 @@ footer {
     padding: 5px;
 }
 
+.portfolio-card-container p, .portfolio-card-container h2 {
+    color: #E5E0DA;
+}
+
 .portfolio-card {
     position: relative;
     height: 250px;
@@ -372,7 +405,7 @@ footer {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: center;
-    box-shadow: 3px 3px 5px var(--ink);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .portfolio-card img {
@@ -408,8 +441,8 @@ footer {
 .ats-resume-button-container .cta-button,
 #contact-form .cta-button,
 .modal-footer .cta-button {
-    box-shadow: 3px 3px 3px black;
-    background-color: var(--dark-green);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    background-color: var(--tertiary-color);
 }
 
 .secondary-portfolio-section img {
@@ -454,7 +487,7 @@ footer {
     position: absolute;
     top: 15px;
     right: 20px;
-    background: var(--ink);
+    background: var(--tertiary-color);
     color: var(--secondary-accent-color);
     border: 1px solid var(--secondary-accent-color);
     width: 35px;
@@ -471,8 +504,6 @@ footer {
 
 .close-modal:hover {
     transform: rotate(90deg);
-    background: var(--dark-green);
-    color: var(--secondary-accent-color);
 }
 
 @keyframes slideDown {
@@ -658,7 +689,7 @@ footer {
     background: linear-gradient(
         to right,
         var(--secondary-accent-color) var(--progress),
-        var(--ink) var(--progress)
+        var(--secondary-color) var(--progress)
     );
     border-radius: 2px;
 }
@@ -780,13 +811,17 @@ footer {
     border: 1px solid var(--secondary-accent-color);
     padding: 2.5rem;
     border-radius: 15px;
-    color: var(--primary-color);
+    color: #E5E0DA;
     box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     gap: 15px;
     font-size: 1.05rem;
     line-height: 1.5;
+}
+
+.form-container label, .form-container select {
+    color: #E5E0DA;
 }
 
 .form-group {
@@ -828,7 +863,7 @@ textarea {
     border: 1px solid rgba(229, 224, 218, 0.3);
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.2);
-    color: var(--primary-color);
+    color: #E5E0DA;
     font-family: inherit;
     font-size: 1rem;
 }
@@ -891,7 +926,7 @@ select:user-invalid {
 }
 
 .form-success-container p {
-    color: var(--primary-color);
+    color: #E5E0DA;
     font-size: 1.1rem;
 }
 
@@ -983,7 +1018,7 @@ select:user-invalid {
     .cta-button:hover {
         color: var(--secondary-accent-color);
         transform: translateY(-10px);
-        box-shadow: 6px 6px 6px grey;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
     }
 
     .secondary-portfolio-section .cta-button:hover,
@@ -995,7 +1030,7 @@ select:user-invalid {
 
     .cta-button:active {
         transform: translateY(1px);
-        box-shadow: 0 0 6px grey;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
     }
 
     .secondary-portfolio-section .cta-button:active,
@@ -1039,7 +1074,7 @@ select:user-invalid {
     }
 
     a:hover {
-        color: var(--primary-accent-color);
+        color: var(--secondary-accent-color);
     }
 
     .navbar::before {
@@ -1084,7 +1119,7 @@ select:user-invalid {
     }
 
     .portfolio-card:hover {
-        box-shadow: 6px 6px 6px var(--ink);
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
         cursor: pointer;
     }
 
