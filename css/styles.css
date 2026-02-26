@@ -20,6 +20,10 @@
     box-sizing: inherit;
 }
 
+.hidden {
+    display: none !important;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -865,6 +869,31 @@ select:user-invalid {
     color: rgba(229, 224, 218, 0.5);
     font-size: 0.95rem;
     opacity: 0.6;
+}
+
+.form-success-container {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction:
+    column;
+    gap: 15px;
+    align-items: center;
+}
+
+.form-success-container i {
+    font-size: 3rem;
+    color: var(--secondary-accent-color);
+}
+
+.form-success-container h2 {
+    color: var(--secondary-accent-color);
+    font-size: 2rem;
+}
+
+.form-success-container p {
+    color: var(--primary-color);
+    font-size: 1.1rem;
 }
 
 /* ==========================================================================
