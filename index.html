@@ -11,7 +11,11 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
-
+        <script>
+            if (localStorage.getItem('ithildin-mode') === 'true') {
+                document.documentElement.classList.add('ithildin-mode');
+            }
+        </script>
         <script src="https://kit.fontawesome.com/638957e651.js" crossorigin="anonymous"></script>
         <script src="js/script.js" defer></script>
     </head>
@@ -19,7 +23,7 @@
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
             <div class="logo">
-                <img src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
+                <img id="darkmode-button" src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
                 <p>E.R. Mariesdotter</p>
             </div>
             <nav class="navbar" aria-label="Main navigation">
@@ -41,7 +45,7 @@
                 </div>
                 <div class="hero-content-section">
                     <h1 id="hero-heading">Mae govannen! Call me <span>Vira</span></h1>
-                    <p>A .NET fullstack system developer based in Stockholm Sweden, with an obsession for data-intensive applications.</p>
+                    <p>A .NET fullstack system developer based in Stockholm, Sweden, with an obsession for data-intensive applications.</p>
                     <a class="cta-button" id="hero-button" href="contact.html">Let's work together</a>
                 </div>
             </section>
@@ -119,5 +123,12 @@
         <footer>
             <p>&COPY; 2026 Elvira Rebecca Mariesdotter. All rights reserved.</p>
         </footer>
+        <dialog id="easter-egg-modal" class="modal" aria-labelledby="easter-egg-modal-title">
+            <div class="modal-container">
+                <button class="close-modal" id="close-easter-egg-btn" type="button" aria-label="Close One Ring dialog">&times;</button>
+                <div class="modal-header"><h2 id="easter-egg-modal-title">One Ring</h2></div>
+                <div class="modal-body"><p>...to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them!</p></div>
+            </div>
+        </dialog>
     </body>
 </html>

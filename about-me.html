@@ -11,7 +11,11 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
-
+        <script>
+            if (localStorage.getItem('ithildin-mode') === 'true') {
+                document.documentElement.classList.add('ithildin-mode');
+            }
+        </script>
         <script src="https://kit.fontawesome.com/638957e651.js" crossorigin="anonymous"></script>
         <script src="js/script.js" defer></script>
     </head>
@@ -19,7 +23,7 @@
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
             <div class="logo">
-                <img src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
+                <img id="darkmode-button" src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
                 <p>E.R. Mariesdotter</p>
             </div>
             <nav class="navbar" aria-label="Main navigation">
@@ -36,9 +40,19 @@
             <section class="story-info-section" aria-labelledby="about-heading">
                 <article class="story-content-container">
                     <h1 id="about-heading">About Vira</h1>
-                    <p>My interest in code and software began in 2022 through introduction from my peers.
-                         Before then, I had spent my career in a high-intensive field solving problems whilst communicating with team members as a specialist P.T. in highly specialized healthcare. Solving problems has always been a part of what makes me tick, and software development became a new field to challenge myself and my capabilities to identify, solve and optimize issues and products. 
-                         Today, I am mostly focused on scalable, evolvable and accessible software building, preferring to share that process with a team of equals around me</p>
+                    <p>
+                        My interest in code and software began in 2022 through an introduction by my peers.
+                        Before then, I had spent my career in a high-intensity field solving problems whilst
+                        communicating with team members as a specialist physical therapist in highly specialized healthcare.
+                        Solving problems has always been a part of what makes me tick, and software development became
+                         a new arena to challenge my problem-solving abilities.
+                        Today, I am mostly focused on scalable, evolvable and accessible software
+                        development, preferring to share that process with a team of equals around me.
+                    </p>
+                    <p>
+                        Outside of software, I like to spend my time outside in the woods
+                        with my dog and my partner, or getting lost in great books and music.
+                    </p>
                 </article>
                 <div class="story-image-container">
                     <img alt="a picture of Elvira with her best friend, both looking at a laptop screen, smiling." src="assets/about-image.jpg">
@@ -55,22 +69,22 @@
                     <h2 class="experience-title">.Net Fullstack Studies</h2>
                     <h3 class="experience-subtitle">Chas Academy | Stockholm</h3>
                     <p class="experience paragraph">
-                        Started in September of 2025, now undergoing 2 Years of full time studies
+                        Started in September of 2025, now undergoing 2 years of full-time studies
                         working on projects individually and in teams, both
-                        within my specific tech stack, and cross platform with students from other
-                        classes. Learning C#, .NET, API usage, front end development, UX, project
+                        within my specific tech stack, and cross-discipline with students from other
+                        classes. Learning C#, .NET, API usage, front-end development, UX, project
                         methods including Agile methodologies,
                         and much more. Gaining experience in problem solving, pair programming, and
-                        working with Agile methodologies.
+                        collaborative workflows.
 
                         I am the class representative of the class NET25,
-                        acting as mouthpiece for my class at quarter-annually board meetings - focusing on making
-                        sure every member of class gets their voice heard.
+                        acting as the mouthpiece for my class at quarterly board meetings - focusing on making
+                        sure every member of the class gets their voice heard.
 
-                        During this period I have lead and are still leading several projects, both school-specific and hobby projects with my peers,
+                        During this period I have led and am still leading several projects, both school-specific and hobby projects with my peers,
                          staying ahead of the curve by introducing new frameworks, tools and architectural systems that are not a part of the curriculum.
 
-                        Also reading books on the side regarding software development and computer science to not miss out on theory, also applying it practically in all projects and hackathon-events I attend to.
+                        I also read books on the side regarding software development and computer science to not miss out on theory, applying it practically in all projects and hackathon events I attend.
 
                     </p>
                 </div>
@@ -84,7 +98,7 @@
                     <h2 class="experience-title">Prep. work</h2>
                     <h3 class="experience-subtitle">FreeCodeCamp & Microsoft Learn</h3>
                     <p class="experience paragraph">
-                        Completed several courses in HTML, CSS, JS vanilla, C and C# in early and mid 2025 to prepare for
+                        Completed several courses in HTML, CSS, vanilla JS, C and C# in early and mid 2025 to prepare for
                         my studies at Chas Academy. Gained a solid foundation in web development
                         and programming concepts, which helped me hit the ground running when
                         I started my formal education.
@@ -96,5 +110,12 @@
         <footer>
             <p>&COPY; 2026 Elvira Rebecca Mariesdotter. All rights reserved.</p>
         </footer>
+        <dialog id="easter-egg-modal" class="modal" aria-labelledby="easter-egg-title">
+            <div class="modal-container">
+                <button class="close-modal" id="close-easter-egg-btn" type="button" aria-label="Close dialog">&times;</button>
+                <div class="modal-header"><h2 id="easter-egg-title">One Ring</h2></div>
+                <div class="modal-body"><p>...to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them!</p></div>
+            </div>
+        </dialog>
     </body>
 </html>

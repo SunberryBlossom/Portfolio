@@ -1,3 +1,34 @@
+const easterEggButton = document.querySelector('.logo img');
+
+easterEggButton.addEventListener('click', () => {
+    const root = document.documentElement;
+    root.classList.toggle('ithildin-mode');
+    localStorage.setItem('ithildin-mode', root.classList.contains('ithildin-mode'));
+});
+
+const secretWord = 'onering';
+let typedBuffer = '';
+const easterEggDialog = document.getElementById('easter-egg-modal');
+
+document.getElementById('close-easter-egg-btn').addEventListener('click', () => {
+    easterEggDialog.close();
+});
+
+document.addEventListener('keydown', (e) => {
+    typedBuffer += e.key.toLowerCase();
+    if (typedBuffer.length > secretWord.length) {
+        typedBuffer = typedBuffer.slice(-secretWord.length);
+    }
+    if (typedBuffer === secretWord) {
+        typedBuffer = '';
+        easterEggDialog.showModal();
+    }
+});
+
+easterEggDialog.addEventListener('click', (e) => {
+    if (e.target === easterEggDialog) easterEggDialog.close();
+});
+
 const projectData = {
     "munilytics": {
         title: "Munilytics",

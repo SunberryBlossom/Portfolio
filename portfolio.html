@@ -11,7 +11,11 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
-
+        <script>
+            if (localStorage.getItem('ithildin-mode') === 'true') {
+                document.documentElement.classList.add('ithildin-mode');
+            }
+        </script>
         <script src="https://kit.fontawesome.com/638957e651.js" crossorigin="anonymous"></script>
         <script src="js/script.js" defer></script>
     </head>
@@ -19,7 +23,7 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
             <div class="logo">
-                <img src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
+                <img id="darkmode-button" src="assets/coin_icon.png" alt="E.R. Mariesdotter logo">
                 <p>E.R. Mariesdotter</p>
             </div>
             <nav class="navbar" aria-label="Main navigation">
@@ -89,6 +93,13 @@
         <div class="modal-footer">
             <a id="modal-link" href="#" target="_blank" class="cta-button small">GitHub Repo</a>
         </div>
+    </div>
+</dialog>
+<dialog id="easter-egg-modal" class="modal">
+    <div class="modal-container">
+        <button class="close-modal" id="close-easter-egg-btn">&times;</button>
+        <div class="modal-header"><h2>One Ring</h2></div>
+        <div class="modal-body"><p>...to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them!</p></div>
     </div>
 </dialog>
 </body>
