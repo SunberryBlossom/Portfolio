@@ -76,6 +76,15 @@ h1, h2, h3 {
     top: 0;
 }
 
+.cta-button:focus-visible,
+.portfolio-card:focus-visible,
+.close-modal:focus-visible,
+.navbar a:focus-visible {
+    outline: 2px solid var(--secondary-accent-color);
+    outline-offset: 3px;
+    border-radius: 10px;
+}
+
 header {
     position: sticky;
     z-index: 10;
@@ -502,8 +511,8 @@ footer {
     background: var(--tertiary-color);
     color: var(--secondary-accent-color);
     border: 1px solid var(--secondary-accent-color);
-    width: 35px;
-    height: 35px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.2rem;
@@ -1160,6 +1169,20 @@ select:user-invalid {
         grid-template-columns: 1fr 2fr;
         column-gap: 40px;
         align-items: start;
+    }
+}
+
+/* WCAG 2.3.3 — Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
     }
 }
 
