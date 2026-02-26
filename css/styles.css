@@ -875,8 +875,7 @@ select:user-invalid {
     text-align: center;
     padding: 2rem;
     display: flex;
-    flex-direction:
-    column;
+    flex-direction: column;
     gap: 15px;
     align-items: center;
 }

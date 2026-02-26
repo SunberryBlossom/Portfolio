@@ -94,8 +94,8 @@ if (contactForm) {
             .then(function() {
                 const successBox = document.getElementById('form-success-message-container');
 
-                successBox.classList.toggle("hidden");
-                contactForm.classList.toggle("hidden");
+                successBox.classList.remove("hidden");
+                contactForm.classList.add("hidden");
             }, function(error) {
                 console.log('FAILED...', error);
                 alert('Oops! Something went wrong. Please try again later.');
