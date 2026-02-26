@@ -9,6 +9,7 @@
     --secondary-accent-color: #dab230;
     --ink: #402f21;
     --tertiary-color: #023205;
+    --theme-transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     box-sizing: border-box;
 }
 
@@ -27,7 +28,14 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition:
+        color var(--theme-transition),
+        background-color var(--theme-transition),
+        border-color var(--theme-transition),
+        box-shadow var(--theme-transition),
+        filter var(--theme-transition),
+        opacity var(--theme-transition),
+        transform var(--theme-transition);
 }
 
 .hidden {
@@ -96,7 +104,7 @@ header {
 
 
 .ithildin-mode .logo img {
-    box-shadow: -5px 5px 6px var(--secondary-accent-color);
+    box-shadow: -3px 3px 4px var(--secondary-accent-color);
     filter: brightness(1.2) contrast(1.1);
     border: none;
 }
@@ -465,6 +473,10 @@ footer {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     gap: 10px;
+}
+
+.secondary-text-container p {
+    color: #E5E0DA;
 }
 
 .modal {
@@ -1193,7 +1205,6 @@ select:user-invalid {
     .education-container,
     .experience-article,
     .skill-bar-container,
-    #resume-skills,
     #resume-intro {
         page-break-inside: avoid;
         break-inside: avoid;
